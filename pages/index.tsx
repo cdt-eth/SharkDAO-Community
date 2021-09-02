@@ -9,7 +9,13 @@ const Home: NextPage = () => {
       <Head>
         <title>SharkDAO</title>
         <meta name="SharkDAO" content="SharkDAO.Community" />
-        <link rel="icon" href="/favicon.ico" />
+        {/*
+         Black Favicon */}
+        <link rel="icon" href="/shark-fav-black.ico" />
+
+        {/*
+         Blue Favicon */}
+        {/* <link rel="icon" href="/shark-fav-blue.ico" />  */}
       </Head>
 
       <main className={styles.main}>
@@ -38,16 +44,17 @@ const Home: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+        <div className="flex items-center">
+          <p className="font-shark-display uppercase mr-2">Powered by</p>
+          <span>
+            <Image
+              src="/shark-black.svg"
+              alt="Vercel Logo"
+              width={50}
+              height={50}
+            />
           </span>
-        </a>
+        </div>
       </footer>
     </div>
   );
