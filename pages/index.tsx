@@ -4,7 +4,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Home: NextPage = () => {
   return (
@@ -27,7 +26,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className="xs:hidden sm:flex ">
-            <div className="font-shark-display mr-10 text-3xl text-shark-black max-w-max   absolute z-10">
+            <div className="font-shark-display mr-10 text-3xl text-shark-black max-w-max absolute z-10">
               <Link href="#intro">
                 <a className="cursor-pointer hover:text-shark-blue mb-3 flex">
                   Intro
@@ -73,6 +72,7 @@ const Home: NextPage = () => {
               />
             </div>
           </div>
+
           {/* MOBILE */}
           <div className="flex sm:hidden ">
             <img
@@ -82,7 +82,7 @@ const Home: NextPage = () => {
             />
 
             <div className="flex-1 w-2/6 font-shark-display text-xl">
-              <Link href="#intro" passHref>
+              <Link href="#introduction" passHref>
                 <h3 className="mb-3">Intro</h3>
               </Link>
               <Link href="#the-basics" passHref>
@@ -140,6 +140,7 @@ const Home: NextPage = () => {
               </a>
             </div>
           </div>
+
           <div className="sm:hidden mt-20">
             <img
               className="m-0 w-full"
@@ -147,6 +148,7 @@ const Home: NextPage = () => {
               alt="shark"
             />
           </div>
+
           <div className="xs:hidden sm:flex m-auto w-5/6">
             <a id="intro" />
             <img
@@ -168,6 +170,8 @@ const Home: NextPage = () => {
               alt="baby-shark"
             />
           </div>
+
+          <a id="introduction" />
           <div className="xs:w-full sm:w-4/6 m-auto py-14 pt-7">
             <p className="font-shark-display xs:text-3xl sm:text-4xl xs:tracking-tight sm:hidden">
               SharkDAO began as a hastily, decentrally assembled group of people
