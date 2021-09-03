@@ -19,3 +19,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.shark {
+  position: absolute;
+  left: 37.36%;
+  right: 37.29%;
+  top: 3.8%;
+  bottom: 91.22%;
+}
