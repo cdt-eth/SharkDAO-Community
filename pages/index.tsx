@@ -15,16 +15,18 @@ const Home: NextPage = () => {
         <link rel="icon" href="/shark-fav-black.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main>
         <div className="xs:p-6 sm:p-10">
-          <Image
-            src="/shark-logo-black.svg"
-            alt="shark-logo"
-            height={80}
-            width={160}
-          />
+          <div className="xs:hidden sm:block">
+            <Image
+              src="/shark-logo-black.svg"
+              alt="shark-logo"
+              height={80}
+              width={160}
+            />
+          </div>
 
-          <div className="border flex border-shark-blue ">
+          <div className="border xs:hidden sm:flex border-shark-blue ">
             <div className="font-shark-display mr-10 text-3xl text-shark-black max-w-max border border-shark-magenta">
               <Link href="#intro" passHref>
                 <h3 className="cursor-pointer hover:text-shark-blue mb-3">
@@ -65,16 +67,94 @@ const Home: NextPage = () => {
 
             {/* <div className="border flex flex-1 pt-20 px-48 justify-center">
             <Image
-              className="border-shark-blue w-auto	\"
-              src="/shark-hero-bubble.svg"
-              alt="welcome-shark"
-              width={1000}
-              height={800}
+            className="border-shark-blue w-auto	\"
+            src="/shark-hero-bubble.svg"
+            alt="welcome-shark"
+            width={1000}
+            height={800}
             />
           </div> */}
           </div>
 
-          <div className="xs:w-full sm:w-4/6 m-auto py-14">
+          {/* MOBILE */}
+          <div className="flex sm:hidden ">
+            <img
+              className="flex-1 w-2/6 self-start mr-8"
+              src="/shark-logo-black.svg"
+              alt="shark-logo"
+              // height={80}
+              // width={160}
+            />
+
+            <div className="flex-1 w-2/6 font-shark-display text-xl">
+              <Link href="#intro" passHref>
+                <h3 className="mb-3">Intro</h3>
+              </Link>
+              <Link href="#the-basics" passHref>
+                <h3 className="mb-3">The Basics</h3>
+              </Link>
+              <Link href="#mission" passHref>
+                <h3 className="mb-3">Mission</h3>
+              </Link>
+              <Link href="#values" passHref>
+                <h3 className="mb-3">Values</h3>
+              </Link>
+              <Link href="#community" passHref>
+                <h3 className="mb-3">Community</h3>
+              </Link>
+              <Link href="#faq" passHref>
+                <h3 className="mb-3">FAQ</h3>
+              </Link>
+              <Link href="#media" passHref>
+                <h3 className="mb-3">Media</h3>
+              </Link>
+            </div>
+
+            <div className="flex-1 block  font-shark-display ml-2 text-md text-shark-black max-w-max w-2/6 text-center">
+              <a
+                href="https://discord.com/invite/8aThDGXHqH"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+                  <h3>discord</h3>
+                </div>
+              </a>
+              <a
+                href="https://mobile.twitter.com/sharkdao"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+                  <h3>twitter</h3>
+                </div>
+              </a>
+              <a href="https://nouns.com/" target="_blank" rel="noreferrer">
+                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+                  <h3>nouns</h3>
+                </div>
+              </a>
+              <a
+                href="https://snapshot.org/#/sharkdao.eth"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+                  <h3>snapshot</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div className="sm:hidden mt-20">
+            <img
+              className="m-0 w-full"
+              src="/shark-hero-mobile.svg"
+              alt="shark"
+            />
+          </div>
+
+          <div className="xs:w-full sm:w-4/6 m-auto py-14 pt-7">
             <p className="font-shark-display xs:text-3xl sm:text-4xl xs:tracking-tight">
               SharkDAO began as a hastily, decentrally assembled group of people
               interested in working together and pooling our resources in order
@@ -99,8 +179,6 @@ const Home: NextPage = () => {
             </p>
           </div>
         </div>
-        <br />
-        <br />
 
         <div className="bg-nouns-grey">
           <img
@@ -365,7 +443,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="">
-          <img src="/shark-footer-blue.svg" alt="Vercel Logo" />
+          <img src="/shark-footer-blue.svg" alt="shark-footer" />
         </div>
       </footer>
     </div>
