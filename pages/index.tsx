@@ -16,13 +16,16 @@ const Home: NextPage = () => {
 
       <main>
         <div className="xs:p-6 sm:p-10">
-          <div className="xs:hidden sm:block">
-            <Image
-              src="/shark-logo-black.svg"
-              alt="shark-logo"
-              height={80}
-              width={160}
-            />
+          <div className="xs:hidden sm:block cursor-pointer max-w-max">
+            <Link href="/" passHref>
+              <Image
+                className="relative z-0"
+                src="/shark-logo-black.svg"
+                alt="shark-logo"
+                height={80}
+                width={160}
+              />
+            </Link>
           </div>
 
           <div className="xs:hidden sm:flex ">
@@ -75,11 +78,13 @@ const Home: NextPage = () => {
 
           {/* MOBILE */}
           <div className="flex sm:hidden ">
-            <img
-              className="flex-1 w-2/6 self-start mr-8"
-              src="/shark-logo-black.svg"
-              alt="shark-logo"
-            />
+            <Link href="/" passHref>
+              <img
+                className="flex-1 w-2/6 self-start mr-8"
+                src="/shark-logo-black.svg"
+                alt="shark-logo"
+              />
+            </Link>
 
             <div className="flex-1 w-2/6 font-shark-display text-xl">
               <Link href="#introduction" passHref>
