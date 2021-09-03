@@ -9,6 +9,7 @@ module.exports = {
       "shark-display": ["MS Gothic", "sans-serif"],
     },
     colors: {
+      "shark-white": "#ffffff",
       "shark-black": "#000000",
       "shark-light-blue": "#7CC4F2",
       "shark-blue": "#2B83F6",

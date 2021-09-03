@@ -173,7 +173,7 @@ const Home: NextPage = () => {
             Community
           </p>
 
-          <div className="pt-8 mb-12 m-auto cursor-pointer">
+          <div className="pt-8 mb-4 m-auto cursor-pointer">
             <a
               href="https://twitter.com/fishytootbrush"
               target="_blank"
@@ -187,7 +187,7 @@ const Home: NextPage = () => {
             </a>
           </div>
 
-          <div className="pt-8 mb-12 m-auto flex">
+          <div className="pt-8 mb-20 m-auto flex">
             <div className="cursor-pointer mr-5">
               <a
                 href="https://twitter.com/davecurry"
@@ -328,17 +328,44 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <footer className="mt-10 w-full h-full border-t flex justify-center items-center">
-        <div className="flex items-center">
-          <p className="font-shark-display uppercase mr-2">Powered by</p>
-          <span>
-            <Image
-              src="/shark-black.svg"
-              alt="Vercel Logo"
-              width={50}
-              height={50}
-            />
-          </span>
+      <footer className="relative ">
+        <div className="xs:hidden sm:block p-3 bottom-0 absolute font-shark-display ml-2 text-3xl text-shark-black max-w-max">
+          <a
+            href="https://discord.com/invite/8aThDGXHqH"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+              <h3>discord</h3>
+            </div>
+          </a>
+          <a
+            href="https://mobile.twitter.com/sharkdao"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+              <h3>twitter</h3>
+            </div>
+          </a>
+          <a href="https://nouns.com/" target="_blank" rel="noreferrer">
+            <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+              <h3>nouns</h3>
+            </div>
+          </a>
+          <a
+            href="https://snapshot.org/#/sharkdao.eth"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+              <h3>snapshot</h3>
+            </div>
+          </a>
+        </div>
+
+        <div className="">
+          <img src="/shark-footer-blue.svg" alt="Vercel Logo" />
         </div>
       </footer>
     </div>
