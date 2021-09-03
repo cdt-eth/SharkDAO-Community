@@ -108,6 +108,10 @@ const Home: NextPage = () => {
             src="/the-basics.svg"
             alt="the-basics"
           />
+
+          <p className="sm:hidden py-5 mx-6 border-b-4 font-shark-display text-4xl mb-10">
+            The Basics
+          </p>
           <img
             className="sm:hidden m-auto pb-10"
             src="/the-basics-mobile.svg"
@@ -129,8 +133,8 @@ const Home: NextPage = () => {
 
           <p className="border-b-4 font-shark-display text-4xl mb-10">Values</p>
 
-          <div className="flex pb-24">
-            <div className="flex-1 mr-3">
+          <div className="flex pb-24 flex-wrap">
+            <div className="flex-1 xs:mr-8 sm:mr-3 xs:mb-10 sm:mb-0">
               <h3 className="font-shark-display text-3xl pb-5 tracking-tight">
                 Building
               </h3>
@@ -139,7 +143,7 @@ const Home: NextPage = () => {
               </p>
             </div>
 
-            <div className="flex-1 mr-3">
+            <div className="flex-1 mr-3 xs:mb-10 sm:mb-0">
               <h3 className="font-shark-display text-3xl pb-5 tracking-tight">
                 Innovative
               </h3>
@@ -148,7 +152,7 @@ const Home: NextPage = () => {
               </p>
             </div>
 
-            <div className="flex-1 mr-3">
+            <div className="flex-1 xs:mr-8 sm:mr-3">
               <h3 className="font-shark-display text-3xl pb-5 tracking-tight">
                 Transparent
               </h3>
@@ -169,16 +173,16 @@ const Home: NextPage = () => {
             Community
           </p>
 
-          <div className="pt-8 pb-12 m-auto">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/29bd/d1d6/17d65b65e3b247973033cd64777ddaeb?Expires=1631491200&Signature=NFVquLTrCo939-kHo5mR8GxbXP5XhRaT3BOsSf~kkVm6xBSFBGQsJrPXsL3~gDLx7rdqJRYrTA~oKtHeaxseA~HAeMqvCyItOl19vdepTQFD5cYL~H5lXwch34GUdwrNtK9ibiir8ozoTKEKNKZO1NG1Jc91k9LFELfVP1CR1wYJBVMc7X5wzjZho40wGJY89oJrzra9C7ll-z2NEmRMgvRbYmtRLx3t7PI0rSFaFr-mU23WoxeKFNFK4TqqE3MYfnAkzUJcwc3h012r-1KxTCsccbB4i-xnSNMPmzqC0IX2zTey2c9SK7sbOwkH2RdDphFm334Rrt7RYsac7m6eTw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-              alt="sharks"
-            />
+          <div className="pt-8 mb-12 m-auto cursor-pointer">
             <a
               href="https://twitter.com/fishytootbrush"
               target="_blank"
               rel="noreferrer"
             >
+              <img
+                src="https://s3-alpha-sig.figma.com/img/29bd/d1d6/17d65b65e3b247973033cd64777ddaeb?Expires=1631491200&Signature=NFVquLTrCo939-kHo5mR8GxbXP5XhRaT3BOsSf~kkVm6xBSFBGQsJrPXsL3~gDLx7rdqJRYrTA~oKtHeaxseA~HAeMqvCyItOl19vdepTQFD5cYL~H5lXwch34GUdwrNtK9ibiir8ozoTKEKNKZO1NG1Jc91k9LFELfVP1CR1wYJBVMc7X5wzjZho40wGJY89oJrzra9C7ll-z2NEmRMgvRbYmtRLx3t7PI0rSFaFr-mU23WoxeKFNFK4TqqE3MYfnAkzUJcwc3h012r-1KxTCsccbB4i-xnSNMPmzqC0IX2zTey2c9SK7sbOwkH2RdDphFm334Rrt7RYsac7m6eTw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                alt="sharks"
+              />
               @fishytootbrush
             </a>
           </div>
