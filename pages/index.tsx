@@ -239,7 +239,7 @@ const Home: NextPage = () => {
 
           <div className="flex pb-24 flex-wrap">
             <div className="flex-1 xs:mr-8 sm:mr-3 xs:mb-10 sm:mb-0">
-              <h3 className="font-shark-display text-3xl pb-5 tracking-tight">
+              <h3 className="font-shark-display text-3xl xs:text-2xl pb-5 tracking-tight">
                 Building
               </h3>
               <p className="font-shark-text text-xl">
@@ -248,7 +248,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className="flex-1 mr-3 xs:mb-10 sm:mb-0">
-              <h3 className="font-shark-display text-3xl pb-5 tracking-tight">
+              <h3 className="font-shark-display text-3xl xs:text-2xl pb-5 tracking-tight">
                 Innovative
               </h3>
               <p className="font-shark-text text-xl">
@@ -257,14 +257,14 @@ const Home: NextPage = () => {
             </div>
 
             <div className="flex-1 xs:mr-8 sm:mr-3">
-              <h3 className="font-shark-display text-3xl pb-5 tracking-tight">
+              <h3 className="font-shark-display text-3xl xs:text-2xl pb-5 tracking-tight">
                 Transparent
               </h3>
               <p className="font-shark-text text-xl">Open & inclusive.</p>
             </div>
 
             <div className="flex-1 mr-3">
-              <h3 className="font-shark-display text-3xl pb-5 tracking-tight">
+              <h3 className="font-shark-display text-3xl xs:text-2xl pb-5 tracking-tight">
                 Ecosystems
               </h3>
               <p className="font-shark-text text-xl">
