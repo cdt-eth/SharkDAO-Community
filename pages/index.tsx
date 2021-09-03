@@ -181,10 +181,40 @@ const Home: NextPage = () => {
             >
               <img
                 src="https://s3-alpha-sig.figma.com/img/29bd/d1d6/17d65b65e3b247973033cd64777ddaeb?Expires=1631491200&Signature=NFVquLTrCo939-kHo5mR8GxbXP5XhRaT3BOsSf~kkVm6xBSFBGQsJrPXsL3~gDLx7rdqJRYrTA~oKtHeaxseA~HAeMqvCyItOl19vdepTQFD5cYL~H5lXwch34GUdwrNtK9ibiir8ozoTKEKNKZO1NG1Jc91k9LFELfVP1CR1wYJBVMc7X5wzjZho40wGJY89oJrzra9C7ll-z2NEmRMgvRbYmtRLx3t7PI0rSFaFr-mU23WoxeKFNFK4TqqE3MYfnAkzUJcwc3h012r-1KxTCsccbB4i-xnSNMPmzqC0IX2zTey2c9SK7sbOwkH2RdDphFm334Rrt7RYsac7m6eTw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                alt="sharks"
+                alt="@fishytootbrush"
               />
               @fishytootbrush
             </a>
+          </div>
+
+          <div className="pt-8 mb-12 m-auto flex">
+            <div className="cursor-pointer mr-5">
+              <a
+                href="https://twitter.com/davecurry"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/8551/1d9f/90f69bc90785e0defa70f917611615f2?Expires=1631491200&Signature=BBY6rLjzjGr8Tg~WCgdoZUjKcIKVxGU8hge9mRsFxQj7dPT9aE8knqHMMwdql4k~HcPYbb3jjLEw4UxqmS9P65VdHT8mWXHVYpmw5CA~spfwMu9RwHMW624khsg3sEnGQks3crlxSoOrYw8kwzBQibYh5eZ91BL6sWyMyUz9jWNYS8yaS-xBvIP-nKJ5K4LXvcq16MC9Wc2FyS4xcgLmmMrIFOQL-od237skpyDfRKRnILM01WgCkgfvITfV8vdrqwfsAceGanD8UepiJPAjApxt2juBFbsd1lOJrZIxrKM5LiaQACljVK6t8XqOobj4HROUjQzYiLYFl4bMUv9M-A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                  alt="@davecurry"
+                />
+                @davecurry
+              </a>
+            </div>
+
+            <div className="cursor-pointer">
+              <a
+                href="https://twitter.com/numo_0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/7561/27d6/5ce05a0c464edb4f045d854b07b21896?Expires=1631491200&Signature=CSwUORauVUQU0NhK0093Ok8-6~CPqrMAuBHn6jsuldifGn0Xlf7pIOAzuI15n7PY14FHHOe~6RzOU3MrI6TuOIaoCF9c5hxn3bVvE2cAnrW~lJ4uiuWtSbh90EuTJhpFlMRGMeyTVoy4aUvENA2neAmj9msrDxskm4I6w0amjNs05YfJjbLgm5hl57XyoWL8kG0FL5-WWutQoy2URv~W4Btpg86c6ikPMMcSL1zlL-mioNOA0wa2nyJ~7r6wCJaCti8k0TvN9UC-30dDU9ekZD1jornZfzv8p~c-4xjdrvt2gWlYJ4GvdkaQPO5JEPCmI3qJCO8n6~MMgJ7~X7cvlA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                  alt="@numo"
+                />
+                @numo
+              </a>
+            </div>
           </div>
 
           <p className="border-b-4 font-shark-display text-4xl mb-10">
@@ -194,7 +224,7 @@ const Home: NextPage = () => {
           <div className="font-shark-display xs:text-3xl sm:text-4xl xs:tracking-tight">
             <div className="mb-10">
               <h3 className="pb-3">What is this?</h3>
-              <p className="text-xl">
+              <p className="text-2xl">
                 This is a DAO, or decentralized autonomous organization – a
                 group of people, working together and pooling our resources in
                 order to acquire Nouns, in order to take part in that really
@@ -206,7 +236,7 @@ const Home: NextPage = () => {
 
             <div className="mb-10">
               <h3 className="pb-3">Who are you?</h3>
-              <p className="text-xl">
+              <p className="text-2xl">
                 SharkDAO came together over the course of a day on the chat app
                 Discord (join us here!), led by members Jango, Kenny, Goldy,
                 defi jesus and Beanie, all of whom really wanted to buy a Noun.
@@ -218,7 +248,7 @@ const Home: NextPage = () => {
 
             <div className="mb-10">
               <h3 className="pb-3">Okay, congratulations. What are Nouns?</h3>
-              <p className="text-xl">
+              <p className="text-2xl">
                 Nouns is a recently launched series of NFTs – one-of-a-kind
                 pieces of digital ephemera, whether images or sound, or both, or
                 neither – and something of an experiment. Each day, forever, one
@@ -235,7 +265,7 @@ const Home: NextPage = () => {
               <h3 className="pb-3">
                 So Nouns is a DAO - and SharkDAO is... a DAO. Is this confusing?
               </h3>
-              <p className="text-xl">
+              <p className="text-2xl">
                 Yeah, it is. Our friend INVDR made these infographics to help.
               </p>
             </div>
@@ -244,27 +274,27 @@ const Home: NextPage = () => {
               <h3 className="pb-3">
                 I'm intrigued, but what are the major risks of joining?
               </h3>
-              <p className="text-xl">
+              <p className="text-2xl">
                 The NFT and crypto spaces are volatile - please don't put in
                 tokens that you can't afford to lose completely. While all of us
                 at Shark DAO are working hard and have nothing but the best
                 intentions, we can't promise that everything will go smoothly.
                  Here are some very bad things that could happen:
-                <ul className="list-disc">
-                  <li>
+                <ul className="list-disc list-inside ">
+                  <li className="pl-8">
                     Two of our trusted bidders could theoretically run off with
                     the wallater, or lose their keys at the same time. We would
                     lose everything. Rekt.
                   </li>
-                  <li>
+                  <li className="pl-8">
                     There could be a bug in the smart contract code that a
                     hacker exploits. We would lose all funds.
                   </li>
-                  <li>
+                  <li className="pl-8">
                     NFTs could crash, never to recover. It’s hard to spend
                     illiquid jpegs.
                   </li>
-                  <li>
+                  <li className="pl-8">
                     The Noun project could crash, never to recover. It’s hard to
                     spend illiquid, highly pixelated pineapple or chainsaw.
                   </li>
@@ -276,9 +306,9 @@ const Home: NextPage = () => {
               <h3 className="pb-3">
                 Okay, I have some ETH and I want to join. How do I do that?
               </h3>
-              <p className="text-xl">
+              <p className="text-2xl">
                 Re-read the risks above first. Then, join in on Juicebox: In
-                exchange for ETH, you’ll receive SHARK tokens, which represent
+                exchange for ETH, you'll receive SHARK tokens, which represent
                 your prorata share of the SharkDAO.
               </p>
             </div>
@@ -287,7 +317,7 @@ const Home: NextPage = () => {
               <h3 className="pb-3">
                 I regret my decision – how do get my ETH back?{" "}
               </h3>
-              <p className="text-xl">
+              <p className="text-2xl">
                 SharkDAO’s tokens, its liquidity, is unlocked for a window each
                 day ahead of the Nouns auction for that day. You can exchange
                 your SHARK for ETH, minus the 5% fee charged by JuiceBox, at any
