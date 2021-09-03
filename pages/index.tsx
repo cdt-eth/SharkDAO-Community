@@ -26,54 +26,52 @@ const Home: NextPage = () => {
             />
           </div>
 
-          <div className="border xs:hidden sm:flex border-shark-blue ">
-            <div className="font-shark-display mr-10 text-3xl text-shark-black max-w-max border border-shark-magenta">
-              <Link href="#intro" passHref>
+          <div className="xs:hidden sm:flex ">
+            <div className="font-shark-display mr-10 text-3xl text-shark-black max-w-max   absolute z-10">
+              <a href="#intro">
                 <h3 className="cursor-pointer hover:text-shark-blue mb-3">
                   Intro
                 </h3>
-              </Link>
-              <Link href="#the-basics" passHref>
+              </a>
+              <a href="#the-basics">
                 <h3 className="cursor-pointer hover:text-shark-blue mb-3">
                   The Basics
                 </h3>
-              </Link>
-              <Link href="#mission" passHref>
+              </a>
+              <a href="#mission">
                 <h3 className="cursor-pointer hover:text-shark-blue mb-3">
                   Mission
                 </h3>
-              </Link>
-              <Link href="#values" passHref>
+              </a>
+              <a href="#values">
                 <h3 className="cursor-pointer hover:text-shark-blue mb-3">
                   Values
                 </h3>
-              </Link>
-              <Link href="#community" passHref>
+              </a>
+              <a href="#community">
                 <h3 className="cursor-pointer hover:text-shark-blue mb-3">
                   Community
                 </h3>
-              </Link>
-              <Link href="#faq" passHref>
+              </a>
+              <a href="#faq">
                 <h3 className="cursor-pointer hover:text-shark-blue mb-3">
                   FAQ
                 </h3>
-              </Link>
-              <Link href="#media" passHref>
+              </a>
+              <a href="#media">
                 <h3 className="cursor-pointer hover:text-shark-blue mb-3">
                   Media
                 </h3>
-              </Link>
+              </a>
             </div>
 
-            {/* <div className="border flex flex-1 pt-20 px-48 justify-center">
-            <Image
-            className="border-shark-blue w-auto	\"
-            src="/shark-hero-bubble.svg"
-            alt="welcome-shark"
-            width={1000}
-            height={800}
-            />
-          </div> */}
+            <div className=" xs:hidden sm:flex flex-1 pt-20 px-60 justify-center relative mb-16">
+              <img
+                className="w-full"
+                src="/shark-hero-bubble.svg"
+                alt="welcome-shark"
+              />
+            </div>
           </div>
 
           {/* MOBILE */}
@@ -82,8 +80,6 @@ const Home: NextPage = () => {
               className="flex-1 w-2/6 self-start mr-8"
               src="/shark-logo-black.svg"
               alt="shark-logo"
-              // height={80}
-              // width={160}
             />
 
             <div className="flex-1 w-2/6 font-shark-display text-xl">
@@ -154,8 +150,29 @@ const Home: NextPage = () => {
             />
           </div>
 
+          <div className="xs:hidden sm:flex m-auto w-5/6" id="#intro">
+            <img
+              className="relative right-16"
+              src="/shark-little.svg"
+              alt="baby-shark"
+            />
+
+            <p className="font-shark-display   sm:text-4xl xs:tracking-tight mx-10">
+              SharkDAO began as a hastily, decentrally assembled group of people
+              interested in working together and pooling our resources in order
+              to acquire Nouns, a novel and beautiful experiment in generative,
+              code-driven art. And we did get a Noun. Two, actually.
+            </p>
+
+            <img
+              className="self-start relative left-6"
+              src="/shark-little.svg"
+              alt="baby-shark"
+            />
+          </div>
+
           <div className="xs:w-full sm:w-4/6 m-auto py-14 pt-7">
-            <p className="font-shark-display xs:text-3xl sm:text-4xl xs:tracking-tight">
+            <p className="font-shark-display xs:text-3xl sm:text-4xl xs:tracking-tight sm:hidden">
               SharkDAO began as a hastily, decentrally assembled group of people
               interested in working together and pooling our resources in order
               to acquire Nouns, a novel and beautiful experiment in generative,
@@ -265,7 +282,7 @@ const Home: NextPage = () => {
             </a>
           </div>
 
-          <div className="pt-8 mb-20 m-auto flex">
+          <div className="pt-8 mb-20 m-auto flex w-full">
             <div className="cursor-pointer mr-5">
               <a
                 href="https://twitter.com/davecurry"
@@ -358,21 +375,21 @@ const Home: NextPage = () => {
                 at Shark DAO are working hard and have nothing but the best
                 intentions, we can't promise that everything will go smoothly.
                  Here are some very bad things that could happen:
-                <ul className="list-disc list-inside ">
-                  <li className="pl-8">
+                <ul className="list-disc list-outside ">
+                  <li className="ml-12">
                     Two of our trusted bidders could theoretically run off with
                     the wallater, or lose their keys at the same time. We would
                     lose everything. Rekt.
                   </li>
-                  <li className="pl-8">
+                  <li className="ml-12">
                     There could be a bug in the smart contract code that a
                     hacker exploits. We would lose all funds.
                   </li>
-                  <li className="pl-8">
+                  <li className="ml-12">
                     NFTs could crash, never to recover. It’s hard to spend
                     illiquid jpegs.
                   </li>
-                  <li className="pl-8">
+                  <li className="ml-12">
                     The Noun project could crash, never to recover. It’s hard to
                     spend illiquid, highly pixelated pineapple or chainsaw.
                   </li>
