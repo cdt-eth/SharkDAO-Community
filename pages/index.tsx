@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Home: NextPage = () => {
   return (
@@ -28,41 +28,41 @@ const Home: NextPage = () => {
 
           <div className="xs:hidden sm:flex ">
             <div className="font-shark-display mr-10 text-3xl text-shark-black max-w-max   absolute z-10">
-              <a href="#intro">
-                <h3 className="cursor-pointer hover:text-shark-blue mb-3">
+              <Link href="#intro">
+                <a className="cursor-pointer hover:text-shark-blue mb-3 flex">
                   Intro
-                </h3>
-              </a>
-              <a href="#the-basics">
-                <h3 className="cursor-pointer hover:text-shark-blue mb-3">
+                </a>
+              </Link>
+              <Link href="#the-basics">
+                <a className="cursor-pointer hover:text-shark-blue mb-3 flex">
                   The Basics
-                </h3>
-              </a>
-              <a href="#mission">
-                <h3 className="cursor-pointer hover:text-shark-blue mb-3">
+                </a>
+              </Link>
+              <Link href="#mission">
+                <a className="cursor-pointer hover:text-shark-blue mb-3 flex">
                   Mission
-                </h3>
-              </a>
-              <a href="#values">
-                <h3 className="cursor-pointer hover:text-shark-blue mb-3">
+                </a>
+              </Link>
+              <Link href="#values">
+                <a className="cursor-pointer hover:text-shark-blue mb-3 flex">
                   Values
-                </h3>
-              </a>
-              <a href="#community">
-                <h3 className="cursor-pointer hover:text-shark-blue mb-3">
+                </a>
+              </Link>
+              <Link href="#community">
+                <a className="cursor-pointer hover:text-shark-blue mb-3 flex">
                   Community
-                </h3>
-              </a>
-              <a href="#faq">
-                <h3 className="cursor-pointer hover:text-shark-blue mb-3">
+                </a>
+              </Link>
+              <Link href="#faq">
+                <a className="cursor-pointer hover:text-shark-blue mb-3 flex">
                   FAQ
-                </h3>
-              </a>
-              <a href="#media">
-                <h3 className="cursor-pointer hover:text-shark-blue mb-3">
+                </a>
+              </Link>
+              <Link href="#media">
+                <a className="cursor-pointer hover:text-shark-blue mb-3 flex">
                   Media
-                </h3>
-              </a>
+                </a>
+              </Link>
             </div>
 
             <div className=" xs:hidden sm:flex flex-1 pt-20 px-60 justify-center relative mb-16">
@@ -73,7 +73,6 @@ const Home: NextPage = () => {
               />
             </div>
           </div>
-
           {/* MOBILE */}
           <div className="flex sm:hidden ">
             <img
@@ -141,7 +140,6 @@ const Home: NextPage = () => {
               </a>
             </div>
           </div>
-
           <div className="sm:hidden mt-20">
             <img
               className="m-0 w-full"
@@ -149,8 +147,8 @@ const Home: NextPage = () => {
               alt="shark"
             />
           </div>
-
-          <div className="xs:hidden sm:flex m-auto w-5/6" id="#intro">
+          <div className="xs:hidden sm:flex m-auto w-5/6">
+            <a id="intro" />
             <img
               className="relative right-16"
               src="/shark-little.svg"
@@ -170,7 +168,6 @@ const Home: NextPage = () => {
               alt="baby-shark"
             />
           </div>
-
           <div className="xs:w-full sm:w-4/6 m-auto py-14 pt-7">
             <p className="font-shark-display xs:text-3xl sm:text-4xl xs:tracking-tight sm:hidden">
               SharkDAO began as a hastily, decentrally assembled group of people
@@ -198,6 +195,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="bg-nouns-grey">
+          <a id="the-basics" />
           <img
             className="xs:hidden sm:flex m-auto"
             src="/the-basics.svg"
@@ -215,6 +213,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="xs:px-10 sm:w-4/6 m-auto py-14">
+          <a id="mission" />
           <p className="border-b-4 font-shark-display text-4xl mb-10">
             Mission
           </p>
@@ -226,6 +225,7 @@ const Home: NextPage = () => {
             experiences.
           </p>
 
+          <a id="values" />
           <p className="border-b-4 font-shark-display text-4xl mb-10">Values</p>
 
           <div className="flex pb-24 flex-wrap">
@@ -264,6 +264,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
+          <a id="community" />
           <p className="border-b-4 font-shark-display text-4xl mb-10">
             Community
           </p>
@@ -312,6 +313,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
+          <a id="faq" />
           <p className="border-b-4 font-shark-display text-4xl mb-10">
             Frequently Asked Questions
           </p>
@@ -460,6 +462,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="">
+          <a id="media" />
           <img src="/shark-footer-blue.svg" alt="shark-footer" />
         </div>
       </footer>
