@@ -27,3 +27,7 @@ a {
   top: 3.8%;
   bottom: 91.22%;
 }
+
+.border-3 {
+  border-width: 3px;
+}
