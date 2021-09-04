@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           </ScrollLink>
 
           <div className="xs:hidden sm:flex ">
-            <div className="font-shark-display sm:fixed mt-24 mr-10 text-3xl text-shark-black max-w-max absolute z-10">
+            <div className="font-shark-display sm:fixed mt-24 mr-10 text-2xl text-shark-black max-w-max absolute z-10">
               <ScrollLink to="intro" spy={true} smooth={true}>
                 <a className="cursor-pointer hover:text-shark-blue mb-6 flex">
                   Intro
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
               </ScrollLink>
 
               <ScrollLink to="values" spy={true} smooth={true}>
-                <a className="cursor-pointer hover:text-shark-blue mb-3 flex">
+                <a className="cursor-pointer hover:text-shark-blue mb-6 flex">
                   Values
                 </a>
               </ScrollLink>
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
               </ScrollLink>
 
               <ScrollLink to="media" spy={true} smooth={true}>
-                <a className="cursor-pointer hover:text-shark-blue mb-3 flex">
+                <a className="cursor-pointer hover:text-shark-blue mb-0 flex">
                   Media
                 </a>
               </ScrollLink>
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
           {/* MOBILE */}
           <div className="flex sm:hidden">
             <div className="flex-1 self-start mr-8 pt-2">
-              <ScrollLink to="home2" spy={true} smooth={true}>
+              <ScrollLink to="m-home" spy={true} smooth={true}>
                 <div className="fixed ">
                   <img
                     className=" w-2/6 pr-4"
@@ -99,25 +99,31 @@ const Home: NextPage = () => {
             </div>
 
             <div className="flex-1 w-2/6 font-shark-display text-xl">
-              <ScrollLink to="introduction" spy={true} smooth={true}>
+              <ScrollLink to="m-intro" spy={true} smooth={true}>
                 <h3 className="mb-3">Intro</h3>
               </ScrollLink>
-              <ScrollLink to="the-basics" spy={true} smooth={true}>
+
+              <ScrollLink to="m-the-basics" spy={true} smooth={true}>
                 <h3 className="mb-3">The Basics</h3>
               </ScrollLink>
-              <ScrollLink to="mission" spy={true} smooth={true}>
+
+              <ScrollLink to="m-mission" spy={true} smooth={true}>
                 <h3 className="mb-3">Mission</h3>
               </ScrollLink>
-              <ScrollLink to="values" spy={true} smooth={true}>
+
+              <ScrollLink to="m-values" spy={true} smooth={true}>
                 <h3 className="mb-3">Values</h3>
               </ScrollLink>
-              <ScrollLink to="community" spy={true} smooth={true}>
+
+              <ScrollLink to="m-community" spy={true} smooth={true}>
                 <h3 className="mb-3">Community</h3>
               </ScrollLink>
-              <ScrollLink to="faq" spy={true} smooth={true}>
+
+              <ScrollLink to="m-faq" spy={true} smooth={true}>
                 <h3 className="mb-3">FAQ</h3>
               </ScrollLink>
-              <ScrollLink to="media" spy={true} smooth={true}>
+
+              <ScrollLink to="m-media" spy={true} smooth={true}>
                 <h3 className="mb-3">Media</h3>
               </ScrollLink>
             </div>
@@ -159,7 +165,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className="sm:hidden mt-20">
-            <a id="home2" />
+            <a id="m-home" />
             <img
               className="m-0 w-full"
               src="/shark-hero-mobile.svg"
@@ -189,7 +195,7 @@ const Home: NextPage = () => {
             />
           </div>
 
-          <a id="introduction" />
+          <a id="m-intro" />
           <div className="xs:w-full sm:w-4/6 m-auto py-14 pt-7">
             <p className="font-shark-display xs:text-3xl sm:text-4xl xs:tracking-tight sm:hidden">
               SharkDAO began as a hastily, decentrally assembled group of people
@@ -213,6 +219,7 @@ const Home: NextPage = () => {
               come to interest us just as much as Nouns still do. <br />
               <br /> Let's bite.
             </p>
+            <a className="sm:hidden" id="m-the-basics" />
           </div>
         </div>
 
@@ -232,10 +239,12 @@ const Home: NextPage = () => {
             src="/the-basics-mobile.svg"
             alt="the-basics"
           />
+          <a className="sm:hidden" id="m-mission" />
         </div>
 
-        <div className="xs:px-10 sm:w-4/6 m-auto py-14">
+        <div className="xs:px-10 sm:w-4/6 m-auto py-20">
           <a id="mission" />
+
           <p className="border-b-4 font-shark-display text-4xl mb-10">
             Mission
           </p>
@@ -245,6 +254,7 @@ const Home: NextPage = () => {
             collects Nouns, helps steer and grow the NounsDAO ecosystem, and
             partners with artists, developers, and DAOs to create new blockchain
             experiences.
+            <a className="sm:hidden" id="m-values" />
           </p>
 
           <a id="values" />
@@ -283,6 +293,7 @@ const Home: NextPage = () => {
               <p className="font-shark-text text-xl">
                 Creating value around the Nouns, NFT, and Web3 space.
               </p>
+              <a className="sm:hidden" id="m-community" />
             </div>
           </div>
 
@@ -332,6 +343,7 @@ const Home: NextPage = () => {
                 />
                 @numo
               </a>
+              <a className="sm:hidden" id="m-faq" />
             </div>
           </div>
 
@@ -485,6 +497,7 @@ const Home: NextPage = () => {
 
         <div className="">
           <a id="media" />
+          <a id="m-media" />
           <img src="/shark-footer-blue.svg" alt="shark-footer" />
         </div>
       </footer>
