@@ -219,11 +219,10 @@ const Home: NextPage = () => {
               come to interest us just as much as Nouns still do. <br />
               <br /> Let's bite.
             </p>
-            <a className="sm:hidden" id="m-the-basics" />
           </div>
         </div>
 
-        <div className="bg-nouns-grey">
+        <div className="bg-nouns-grey pt-10">
           <a id="the-basics" />
           <img
             className="xs:hidden sm:flex m-auto"
@@ -231,6 +230,7 @@ const Home: NextPage = () => {
             alt="the-basics"
           />
 
+          <a className="sm:hidden " id="m-the-basics" />
           <p className="sm:hidden py-5 mx-6 border-b-4 font-shark-display text-4xl mb-10">
             The Basics
           </p>
