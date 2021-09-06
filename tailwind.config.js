@@ -30,7 +30,7 @@ module.exports = {
       "shark-pink": "#FF638D",
       "shark-orange": "#FE500C",
       "shark-beach": "#F9F1DF",
-      "nouns-grey": "#D5D7E1",
+      "nouns-grey": "#F2F3F6",
     },
     screens: {
       xs: "200px",
