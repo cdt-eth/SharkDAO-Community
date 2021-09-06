@@ -118,7 +118,7 @@ const Home: NextPage = () => {
                 to="m-home"
                 spy={true}
                 smooth={true}
-                className="fixed border w-2/6"
+                className="fixed w-2/6"
               >
                 <img
                   className="pr-4"
@@ -134,7 +134,7 @@ const Home: NextPage = () => {
                 spy={true}
                 smooth={true}
                 offset={-50}
-                className="mb-3 border flex"
+                className="mb-3 flex"
               >
                 Intro
               </ScrollLink>
@@ -143,7 +143,7 @@ const Home: NextPage = () => {
                 to="m-the-basics"
                 spy={true}
                 smooth={true}
-                className="mb-3 border flex"
+                className="mb-3 flex"
                 offset={-100}
               >
                 The Basics
@@ -154,7 +154,7 @@ const Home: NextPage = () => {
                 spy={true}
                 smooth={true}
                 offset={-15}
-                className="mb-3 border flex"
+                className="mb-3 flex"
               >
                 Mission
               </ScrollLink>
@@ -164,7 +164,7 @@ const Home: NextPage = () => {
                 spy={true}
                 smooth={true}
                 offset={15}
-                className="mb-3 border flex"
+                className="mb-3 flex"
               >
                 Values
               </ScrollLink>
@@ -173,7 +173,7 @@ const Home: NextPage = () => {
                 to="m-community"
                 spy={true}
                 smooth={true}
-                className="mb-3 border flex"
+                className="mb-3 flex"
               >
                 Community
               </ScrollLink>
@@ -182,7 +182,7 @@ const Home: NextPage = () => {
                 to="m-faq"
                 spy={true}
                 smooth={true}
-                className="mb-3 border flex"
+                className="mb-3 flex"
               >
                 FAQ
               </ScrollLink>
@@ -192,7 +192,7 @@ const Home: NextPage = () => {
                 spy={true}
                 smooth={true}
                 offset={-100}
-                className="mb-3 border flex"
+                className="mb-3 flex"
               >
                 Media
               </ScrollLink>
