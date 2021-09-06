@@ -199,7 +199,7 @@ const Home: NextPage = () => {
               </ScrollLink>
             </div>
 
-            <div className="flex-1 block pt-2 font-shark-display ml-2 text-md text-shark-black max-w-max w-2/6 text-center">
+            <div className="flex-1 block pt-0 font-shark-display ml-2 text-md text-shark-black max-w-max w-2/6 text-center">
               <a
                 href="https://discord.com/invite/8aThDGXHqH"
                 target="_blank"
