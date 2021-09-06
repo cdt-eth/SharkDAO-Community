@@ -410,7 +410,7 @@ const Home: NextPage = () => {
                 tokens that you can't afford to lose completely. While all of us
                 at Shark DAO are working hard and have nothing but the best
                 intentions, we can't promise that everything will go smoothly.
-                 Here are some very bad things that could happen:
+                Here are some very bad things that could happen:
                 <ul className="list-disc list-outside ">
                   <li className="ml-12">
                     Two of our trusted bidders could theoretically run off with
