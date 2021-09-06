@@ -3,6 +3,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer base { */
+@font-face {
+  font-family: "MsGothic-SharkDAOMembersOnly";
+  src: url(/fonts/MsGothic-SharkDAOMembersOnly-Heavy.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MsGothic-SharkDAOMembersOnly";
+  src: url(/fonts/MsGothic-SharkDAOMembersOnly-Black.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MsGothic-SharkDAOMembersOnly";
+  src: url(/fonts/MsGothic-SharkDAOMembersOnly-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MsGothic-SharkDAOMembersOnly";
+  src: url(/fonts/MsGothic-SharkDAOMembersOnly-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* } */
+
 html,
 body {
   padding: 0;
