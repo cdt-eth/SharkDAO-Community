@@ -255,7 +255,7 @@ const Home: NextPage = () => {
               SharkDAO began as a hastily, decentrally assembled group of people
               interested in working together and pooling our resources in order
               to acquire Nouns, a novel and beautiful experiment in generative,
-              code-driven art. And we did get a Noun. Two, actually.
+              code-driven art. And we did get a Noun. Three, actually.
             </p>
 
             <img
@@ -271,7 +271,7 @@ const Home: NextPage = () => {
               SharkDAO began as a hastily, decentrally assembled group of people
               interested in working together and pooling our resources in order
               to acquire Nouns, a novel and beautiful experiment in generative,
-              code-driven art. And we did get a Noun. Two, actually.
+              code-driven art. And we did get a Noun. Three, actually.
             </p>
 
             <img
@@ -307,7 +307,7 @@ const Home: NextPage = () => {
           <img
             className="sm:hidden m-auto pb-10"
             src="/the-basics-mobile.svg"
-            alt="the-basics"
+            alt="the-basics-mobile"
           />
           <a className="sm:hidden" id="m-mission" />
         </div>
