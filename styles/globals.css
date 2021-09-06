@@ -29,8 +29,8 @@
   }
 
   @font-face {
-    font-family: "MsGothic-SharkDAOMembersOnly";
     src: url(/fonts/MsGothic-SharkDAOMembersOnly-Regular.woff) format("woff");
+    font-family: "MsGothic-SharkDAOMembersOnly";
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -64,4 +64,9 @@ a {
 
 .border-3 {
   border-width: 3px;
+}
+
+.s-display {
+  font-family: "MsGothic-SharkDAOMembersOnly";
+  font-weight: normal;
 }

@@ -43,7 +43,7 @@ const Home: NextPage = () => {
 
           {/* DESKTOP */}
           <div className="xs:hidden sm:flex ">
-            <div className="font-shark-display sm:fixed mt-24 mr-10 text-2xl text-shark-black max-w-max absolute z-10">
+            <div className="font-shark-display s-display sm:fixed mt-24 mr-10 text-2xl text-shark-black max-w-max absolute z-10">
               <ScrollLink
                 to="intro"
                 smooth={true}
@@ -129,7 +129,7 @@ const Home: NextPage = () => {
               </ScrollLink>
             </div>
 
-            <div className="flex-1 w-2/6  font-shark-display text-xl">
+            <div className="flex-1 w-2/6  font-shark-display s-display text-xl">
               <ScrollLink
                 to="m-intro"
                 spy={true}
@@ -199,7 +199,7 @@ const Home: NextPage = () => {
               </ScrollLink>
             </div>
 
-            <div className="flex-1 block pt-0 font-shark-display ml-2 text-md text-shark-black max-w-max w-2/6 text-center">
+            <div className="flex-1 block pt-0 font-shark-display s-display ml-2 text-md text-shark-black max-w-max w-2/6 text-center">
               <a
                 href="https://discord.com/invite/8aThDGXHqH"
                 target="_blank"
@@ -251,7 +251,7 @@ const Home: NextPage = () => {
               alt="baby-shark"
             />
 
-            <p className="font-shark-display   sm:text-4xl xs:tracking-tight mx-10">
+            <p className="font-shark-display s-display s-display  sm:text-4xl xs:tracking-tight mx-10">
               SharkDAO began as a hastily, decentrally assembled group of people
               interested in working together and pooling our resources in order
               to acquire Nouns, a novel and beautiful experiment in generative,
@@ -267,7 +267,7 @@ const Home: NextPage = () => {
 
           <a id="m-intro" />
           <div className="xs:w-full sm:w-4/6 m-auto py-14 pt-7">
-            <p className="font-shark-display xs:text-3xl sm:text-4xl xs:tracking-tight sm:hidden">
+            <p className="font-shark-display s-display xs:text-3xl sm:text-4xl xs:tracking-tight sm:hidden">
               SharkDAO began as a hastily, decentrally assembled group of people
               interested in working together and pooling our resources in order
               to acquire Nouns, a novel and beautiful experiment in generative,
@@ -280,7 +280,7 @@ const Home: NextPage = () => {
               alt="nouns-2-5"
             />
 
-            <p className="font-shark-display xs:text-3xl sm:text-4xl xs:tracking-tight">
+            <p className="font-shark-display s-display xs:text-3xl sm:text-4xl xs:tracking-tight">
               It's been a short time since we first aped together in Discord, on
               Aug. 9, 2021. But the amount of creative talent and energy
               spinning up within the Shark community – inspired by the novel
@@ -301,7 +301,7 @@ const Home: NextPage = () => {
           />
 
           <a className="sm:hidden " id="m-the-basics" />
-          <p className="sm:hidden py-5 mx-6 border-b-4 font-shark-display text-4xl mb-10">
+          <p className="sm:hidden py-5 mx-6 border-b-4 font-shark-display s-display text-4xl mb-10">
             The Basics
           </p>
           <img
@@ -315,11 +315,11 @@ const Home: NextPage = () => {
         <div className="xs:px-6 sm:w-4/6 m-auto py-20">
           <a id="mission" />
 
-          <p className="border-b-4 font-shark-display text-4xl mb-10">
+          <p className="border-b-4 font-shark-display s-display text-4xl mb-10">
             Mission
           </p>
 
-          <p className="font-shark-display xs:text-3xl sm:text-4xl xs:tracking-tight mb-24">
+          <p className="font-shark-display s-display xs:text-3xl sm:text-4xl xs:tracking-tight mb-24">
             Sharks evolve the Web3 ecosystem by building a community that
             collects Nouns, helps steer and grow the NounsDAO ecosystem, and
             partners with artists, developers, and DAOs to create new blockchain
@@ -328,11 +328,13 @@ const Home: NextPage = () => {
           </p>
 
           <a id="values" />
-          <p className="border-b-4 font-shark-display text-4xl mb-10">Values</p>
+          <p className="border-b-4 font-shark-display s-display text-4xl mb-10">
+            Values
+          </p>
 
           <div className="flex pb-24 flex-wrap">
             <div className="flex-1 xs:mr-8 sm:mr-3 xs:mb-10 sm:mb-0">
-              <h3 className="font-shark-display text-3xl xs:text-2xl pb-5 tracking-tight">
+              <h3 className="font-shark-display s-display text-3xl xs:text-2xl pb-5 tracking-tight">
                 Building
               </h3>
               <p className="font-shark-text text-xl">
@@ -341,7 +343,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className="flex-1 mr-3 xs:mb-10 sm:mb-0">
-              <h3 className="font-shark-display text-3xl xs:text-2xl pb-5 tracking-tight">
+              <h3 className="font-shark-display s-display text-3xl xs:text-2xl pb-5 tracking-tight">
                 Innovative
               </h3>
               <p className="font-shark-text text-xl">
@@ -350,14 +352,14 @@ const Home: NextPage = () => {
             </div>
 
             <div className="flex-1 xs:mr-8 sm:mr-3">
-              <h3 className="font-shark-display text-3xl xs:text-2xl pb-5 tracking-tight">
+              <h3 className="font-shark-display s-display text-3xl xs:text-2xl pb-5 tracking-tight">
                 Transparent
               </h3>
               <p className="font-shark-text text-xl">Open & inclusive.</p>
             </div>
 
             <div className="flex-1 mr-3">
-              <h3 className="font-shark-display text-3xl xs:text-2xl pb-5 tracking-tight">
+              <h3 className="font-shark-display s-display text-3xl xs:text-2xl pb-5 tracking-tight">
                 Ecosystems
               </h3>
               <p className="font-shark-text text-xl">
@@ -368,7 +370,7 @@ const Home: NextPage = () => {
           </div>
 
           <a id="community" />
-          <p className="border-b-4 font-shark-display text-4xl mb-10">
+          <p className="border-b-4 font-shark-display s-display text-4xl mb-10">
             Community
           </p>
 
@@ -418,14 +420,14 @@ const Home: NextPage = () => {
           </div>
 
           <a id="faq" />
-          <p className="border-b-4 font-shark-display text-4xl mb-10">
+          <p className="border-b-4 font-shark-display s-display text-4xl mb-10">
             Frequently Asked Questions
           </p>
 
-          <div className="font-shark-display xs:text-3xl sm:text-4xl xs:tracking-tight">
+          <div className="font-shark-display s-display xs:text-3xl sm:text-4xl xs:tracking-tight">
             <div className="mb-10">
               <h3 className="pb-3">What is this?</h3>
-              <p className="text-2xl">
+              <p className="xs:text-xl sm:text-2xl font-shark-text">
                 This is a DAO, or decentralized autonomous organization – a
                 group of people, working together and pooling our resources in
                 order to acquire Nouns, in order to take part in that really
@@ -437,7 +439,7 @@ const Home: NextPage = () => {
 
             <div className="mb-10">
               <h3 className="pb-3">Who are you?</h3>
-              <p className="text-2xl">
+              <p className="xs:text-xl sm:text-2xl font-shark-text">
                 SharkDAO came together over the course of a day on the chat app
                 Discord (join us here!), led by members Jango, Kenny, Goldy,
                 defi jesus and Beanie, all of whom really wanted to buy a Noun.
@@ -449,7 +451,7 @@ const Home: NextPage = () => {
 
             <div className="mb-10">
               <h3 className="pb-3">Okay, congratulations. What are Nouns?</h3>
-              <p className="text-2xl">
+              <p className="xs:text-xl sm:text-2xl font-shark-text">
                 Nouns is a recently launched series of NFTs – one-of-a-kind
                 pieces of digital ephemera, whether images or sound, or both, or
                 neither – and something of an experiment. Each day, forever, one
@@ -466,7 +468,7 @@ const Home: NextPage = () => {
               <h3 className="pb-3">
                 So Nouns is a DAO - and SharkDAO is... a DAO. Is this confusing?
               </h3>
-              <p className="text-2xl">
+              <p className="xs:text-xl sm:text-2xl font-shark-text">
                 Yeah, it is. Our friend INVDR made these infographics to help.
               </p>
             </div>
@@ -475,7 +477,7 @@ const Home: NextPage = () => {
               <h3 className="pb-3">
                 I'm intrigued, but what are the major risks of joining?
               </h3>
-              <p className="text-2xl">
+              <p className="xs:text-xl sm:text-2xl font-shark-text">
                 The NFT and crypto spaces are volatile - please don't put in
                 tokens that you can't afford to lose completely. While all of us
                 at Shark DAO are working hard and have nothing but the best
@@ -507,7 +509,7 @@ const Home: NextPage = () => {
               <h3 className="pb-3">
                 Okay, I have some ETH and I want to join. How do I do that?
               </h3>
-              <p className="text-2xl">
+              <p className="xs:text-xl sm:text-2xl font-shark-text">
                 Re-read the risks above first. Then, join in on Juicebox: In
                 exchange for ETH, you'll receive SHARK tokens, which represent
                 your prorata share of the SharkDAO.
@@ -518,7 +520,7 @@ const Home: NextPage = () => {
               <h3 className="pb-3">
                 I regret my decision – how do get my ETH back?{" "}
               </h3>
-              <p className="text-2xl">
+              <p className="xs:text-xl sm:text-2xl font-shark-text">
                 SharkDAO’s tokens, its liquidity, is unlocked for a window each
                 day ahead of the Nouns auction for that day. You can exchange
                 your SHARK for ETH, minus the 5% fee charged by JuiceBox, at any
@@ -530,7 +532,7 @@ const Home: NextPage = () => {
       </main>
 
       <footer className="relative ">
-        <div className="xs:hidden sm:block p-3 bottom-0 fixed font-shark-display-heavy ml-2 text-xl text-shark-black max-w-max">
+        <div className="xs:hidden sm:block p-3 bottom-0 fixed font-shark-display s-display-heavy ml-2 text-xl text-shark-black max-w-max">
           <a
             href="https://discord.com/invite/8aThDGXHqH"
             target="_blank"
