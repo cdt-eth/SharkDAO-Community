@@ -1,12 +1,24 @@
 module.exports = {
-  purge: [],
+  mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
     fontFamily: {
       "shark-text": ["AUTHENTIC Sans", "sans-serif"],
-      "shark-display": ["MS Gothic", "sans-serif"],
+      "shark-display": ["MsGothic-SharkDAOMembersOnly-Regular", "sans-serif"],
+      "shark-display-light": [
+        "MsGothic-SharkDAOMembersOnly-Light",
+        "sans-serif",
+      ],
+      "shark-display-heavy": [
+        "MsGothic-SharkDAOMembersOnly-Heavy",
+        "sans-serif",
+      ],
+      "shark-display-black": [
+        "MsGothic-SharkDAOMembersOnly-Black",
+        "sans-serif",
+      ],
     },
     colors: {
       "shark-white": "#ffffff",

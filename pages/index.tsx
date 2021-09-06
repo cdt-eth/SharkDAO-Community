@@ -3,7 +3,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
+
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const Home: NextPage = () => {
@@ -13,6 +13,18 @@ const Home: NextPage = () => {
         <title>SharkDAO</title>
         <meta name="SharkDAO" content="SharkDAO.Community" />
         <link rel="icon" href="/shark-fav-black.ico" />
+        <link
+          rel="preload"
+          href="MsGothic-SharkDAOMembersOnly-Regular.woff"
+          as="font"
+          type="font/woff"
+        />
+        <link
+          rel="preload"
+          href="MsGothic-SharkDAOMembersOnly-Heavy.woff"
+          as="font"
+          type="font/woff"
+        />
       </Head>
 
       <main>
