@@ -7,7 +7,7 @@
   @font-face {
     font-family: "MsGothic-SharkDAOMembersOnly";
     src: url(/fonts/MsGothic-SharkDAOMembersOnly-Heavy.woff) format("woff");
-    font-weight: 900;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
@@ -68,5 +68,5 @@ a {
 
 .s-display {
   font-family: "MsGothic-SharkDAOMembersOnly";
-  font-weight: normal;
+  font-weight: 700;
 }

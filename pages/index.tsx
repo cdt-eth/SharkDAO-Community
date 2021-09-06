@@ -91,14 +91,14 @@ const Home: NextPage = () => {
               >
                 FAQ
               </ScrollLink>
-
+              {/* 
               <ScrollLink
                 to="media"
                 smooth={true}
                 className="cursor-pointer hover:text-shark-blue flex pb-2"
               >
                 Media
-              </ScrollLink>
+              </ScrollLink> */}
             </div>
 
             <div className=" xs:hidden sm:flex flex-1 pt-20 px-60 justify-center relative mb-16">
@@ -188,7 +188,7 @@ const Home: NextPage = () => {
                 FAQ
               </ScrollLink>
 
-              <ScrollLink
+              {/* <ScrollLink
                 to="m-media"
                 spy={true}
                 smooth={true}
@@ -196,7 +196,7 @@ const Home: NextPage = () => {
                 className="mb-3 flex"
               >
                 Media
-              </ScrollLink>
+              </ScrollLink> */}
             </div>
 
             <div className="flex-1 block pt-0 font-shark-display s-display ml-2 text-md text-shark-black max-w-max w-2/6 text-center">
@@ -205,7 +205,7 @@ const Home: NextPage = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue max-w-max">
                   <h3>discord</h3>
                 </div>
               </a>
@@ -214,12 +214,12 @@ const Home: NextPage = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue max-w-max">
                   <h3>twitter</h3>
                 </div>
               </a>
               <a href="https://nouns.com/" target="_blank" rel="noreferrer">
-                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue max-w-max">
                   <h3>nouns</h3>
                 </div>
               </a>
@@ -228,7 +228,7 @@ const Home: NextPage = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+                <div className="cursor-pointer mb-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue max-w-max">
                   <h3>snapshot</h3>
                 </div>
               </a>
