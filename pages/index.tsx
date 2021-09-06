@@ -113,6 +113,7 @@ const Home: NextPage = () => {
 
           {/* MOBILE */}
           <div className="flex sm:hidden">
+            <a id="m-home" />
             <div className="flex-1 self-start mr-8 pt-2">
               <ScrollLink
                 to="m-home"
@@ -235,7 +236,6 @@ const Home: NextPage = () => {
           </div>
 
           <div className="sm:hidden mt-20">
-            <a id="m-home" />
             <img
               className="m-0 w-full"
               src="/shark-hero-mobile.svg"
