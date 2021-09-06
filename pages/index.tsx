@@ -3,7 +3,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const Home: NextPage = () => {
@@ -28,7 +27,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <div className="xs:p-6 sm:p-5 ">
+        <div className="xs:p-6 sm:px-5 sm:py-2 ">
+          {/* DESKTOP */}
           <ScrollLink to="home" spy={true} smooth={true}>
             <div className="xs:hidden sm:block sm:fixed cursor-pointer max-w-max">
               <Image
@@ -41,48 +41,63 @@ const Home: NextPage = () => {
             </div>
           </ScrollLink>
 
+          {/* DESKTOP */}
           <div className="xs:hidden sm:flex ">
             <div className="font-shark-display sm:fixed mt-24 mr-10 text-2xl text-shark-black max-w-max absolute z-10">
-              <ScrollLink to="intro" spy={true} smooth={true}>
-                <a className="cursor-pointer hover:text-shark-blue mb-6 flex">
-                  Intro
-                </a>
+              <ScrollLink
+                to="intro"
+                smooth={true}
+                className="cursor-pointer hover:text-shark-blue flex pb-2"
+              >
+                Intro
               </ScrollLink>
 
-              <ScrollLink to="the-basics" spy={true} smooth={true}>
-                <a className="cursor-pointer hover:text-shark-blue mb-0 flex">
-                  The Basics
-                </a>
+              <ScrollLink
+                to="the-basics"
+                smooth={true}
+                className="cursor-pointer hover:text-shark-blue flex pb-2"
+              >
+                The Basics
               </ScrollLink>
 
-              <ScrollLink to="mission" spy={true} smooth={true}>
-                <a className="cursor-pointer hover:text-shark-blue mb-6 flex">
-                  Mission
-                </a>
+              <ScrollLink
+                to="mission"
+                smooth={true}
+                className="cursor-pointer hover:text-shark-blue flex pb-2"
+              >
+                Mission
               </ScrollLink>
 
-              <ScrollLink to="values" spy={true} smooth={true}>
-                <a className="cursor-pointer hover:text-shark-blue mb-6 flex">
-                  Values
-                </a>
+              <ScrollLink
+                to="values"
+                smooth={true}
+                className="cursor-pointer hover:text-shark-blue flex pb-2"
+              >
+                Values
               </ScrollLink>
 
-              <ScrollLink to="community" spy={true} smooth={true}>
-                <a className="cursor-pointer hover:text-shark-blue mb-6 flex">
-                  Community
-                </a>
+              <ScrollLink
+                to="community"
+                smooth={true}
+                className="cursor-pointer hover:text-shark-blue flex pb-2"
+              >
+                Community
               </ScrollLink>
 
-              <ScrollLink to="faq" spy={true} smooth={true}>
-                <a className="cursor-pointer hover:text-shark-blue mb-0 flex">
-                  FAQ
-                </a>
+              <ScrollLink
+                to="faq"
+                smooth={true}
+                className="cursor-pointer hover:text-shark-blue flex pb-2"
+              >
+                FAQ
               </ScrollLink>
 
-              <ScrollLink to="media" spy={true} smooth={true}>
-                <a className="cursor-pointer hover:text-shark-blue mb-0 flex">
-                  Media
-                </a>
+              <ScrollLink
+                to="media"
+                smooth={true}
+                className="cursor-pointer hover:text-shark-blue flex pb-2"
+              >
+                Media
               </ScrollLink>
             </div>
 
@@ -99,44 +114,87 @@ const Home: NextPage = () => {
           {/* MOBILE */}
           <div className="flex sm:hidden">
             <div className="flex-1 self-start mr-8 pt-2">
-              <ScrollLink to="m-home" spy={true} smooth={true}>
-                <div className="fixed ">
-                  <img
-                    className=" w-2/6 pr-4"
-                    src="/shark-logo-black.svg"
-                    alt="shark-logo"
-                  />
-                </div>
+              <ScrollLink
+                to="m-home"
+                spy={true}
+                smooth={true}
+                className="fixed border w-2/6"
+              >
+                <img
+                  className="pr-4"
+                  src="/shark-logo-black.svg"
+                  alt="shark-logo"
+                />
               </ScrollLink>
             </div>
 
-            <div className="flex-1 w-2/6 font-shark-display text-xl">
-              <ScrollLink to="m-intro" spy={true} smooth={true}>
-                <h3 className="mb-3">Intro</h3>
+            <div className="flex-1 w-2/6  font-shark-display text-xl">
+              <ScrollLink
+                to="m-intro"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                className="mb-3 border flex"
+              >
+                Intro
               </ScrollLink>
 
-              <ScrollLink to="m-the-basics" spy={true} smooth={true}>
-                <h3 className="mb-3">The Basics</h3>
+              <ScrollLink
+                to="m-the-basics"
+                spy={true}
+                smooth={true}
+                className="mb-3 border flex"
+                offset={-100}
+              >
+                The Basics
               </ScrollLink>
 
-              <ScrollLink to="m-mission" spy={true} smooth={true}>
-                <h3 className="mb-3">Mission</h3>
+              <ScrollLink
+                to="m-mission"
+                spy={true}
+                smooth={true}
+                offset={-15}
+                className="mb-3 border flex"
+              >
+                Mission
               </ScrollLink>
 
-              <ScrollLink to="m-values" spy={true} smooth={true}>
-                <h3 className="mb-3">Values</h3>
+              <ScrollLink
+                to="m-values"
+                spy={true}
+                smooth={true}
+                offset={15}
+                className="mb-3 border flex"
+              >
+                Values
               </ScrollLink>
 
-              <ScrollLink to="m-community" spy={true} smooth={true}>
-                <h3 className="mb-3">Community</h3>
+              <ScrollLink
+                to="m-community"
+                spy={true}
+                smooth={true}
+                className="mb-3 border flex"
+              >
+                Community
               </ScrollLink>
 
-              <ScrollLink to="m-faq" spy={true} smooth={true}>
-                <h3 className="mb-3">FAQ</h3>
+              <ScrollLink
+                to="m-faq"
+                spy={true}
+                smooth={true}
+                className="mb-3 border flex"
+              >
+                FAQ
               </ScrollLink>
 
-              <ScrollLink to="m-media" spy={true} smooth={true}>
-                <h3 className="mb-3">Media</h3>
+              <ScrollLink
+                to="m-media"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                className="mb-3 border flex"
+              >
+                Media
               </ScrollLink>
             </div>
 
@@ -254,7 +312,7 @@ const Home: NextPage = () => {
           <a className="sm:hidden" id="m-mission" />
         </div>
 
-        <div className="xs:px-10 sm:w-4/6 m-auto py-20">
+        <div className="xs:px-6 sm:w-4/6 m-auto py-20">
           <a id="mission" />
 
           <p className="border-b-4 font-shark-display text-4xl mb-10">
@@ -472,13 +530,13 @@ const Home: NextPage = () => {
       </main>
 
       <footer className="relative ">
-        <div className="xs:hidden sm:block p-3 bottom-0 fixed font-shark-display  ml-2 text-2xl text-shark-black max-w-max">
+        <div className="xs:hidden sm:block p-3 bottom-0 fixed font-shark-display-heavy ml-2 text-xl text-shark-black max-w-max">
           <a
             href="https://discord.com/invite/8aThDGXHqH"
             target="_blank"
             rel="noreferrer"
           >
-            <div className="cursor-pointer mb-3 border-3 rounded-xl px-4 py-2 bg-shark-white   hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+            <div className="cursor-pointer mb-2 w-min shadow-md border-2 rounded-xl px-4 py-2 bg-shark-white   hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
               <h3>discord</h3>
             </div>
           </a>
@@ -487,12 +545,12 @@ const Home: NextPage = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <div className="cursor-pointer mb-3 border-3 rounded-xl px-4 py-2 bg-shark-white  hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+            <div className="cursor-pointer mb-2 w-min shadow-md border-2 rounded-xl px-4 py-2 bg-shark-white  hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
               <h3>twitter</h3>
             </div>
           </a>
           <a href="https://nouns.com/" target="_blank" rel="noreferrer">
-            <div className="cursor-pointer mb-3 border-3 rounded-xl px-4 py-2 bg-shark-white  hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+            <div className="cursor-pointer mb-2 w-min shadow-md border-2 rounded-xl px-4 py-2 bg-shark-white  hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
               <h3>nouns</h3>
             </div>
           </a>
@@ -501,7 +559,7 @@ const Home: NextPage = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <div className="cursor-pointer mb-3 border-3 rounded-xl px-4 py-2 bg-shark-white  hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
+            <div className="cursor-pointer mb-2 w-min shadow-md border-2 rounded-xl px-4 py-2 bg-shark-white  hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue">
               <h3>snapshot</h3>
             </div>
           </a>
