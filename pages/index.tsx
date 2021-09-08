@@ -101,7 +101,7 @@ const Home: NextPage = () => {
               </ScrollLink> */}
             </div>
 
-            <div className=" xs:hidden sm:flex flex-1 pt-20 px-60 justify-center relative mb-16">
+            <div className=" xs:hidden sm:flex flex-1 pt-20 sm:px-40  lg:px-80  justify-center relative mb-16">
               <a id="home" />
               <img
                 className="w-full"
@@ -255,7 +255,7 @@ const Home: NextPage = () => {
               SharkDAO began as a hastily, decentrally assembled group of people
               interested in working together and pooling our resources in order
               to acquire Nouns, a novel and beautiful experiment in generative,
-              code-driven art. And we did get a Noun. Three, actually.
+              code-driven art. And we did get a Noun. Four, actually.
             </p>
 
             <img
@@ -271,7 +271,7 @@ const Home: NextPage = () => {
               SharkDAO began as a hastily, decentrally assembled group of people
               interested in working together and pooling our resources in order
               to acquire Nouns, a novel and beautiful experiment in generative,
-              code-driven art. And we did get a Noun. Three, actually.
+              code-driven art. And we did get a Noun. Four, actually.
             </p>
 
             <img
