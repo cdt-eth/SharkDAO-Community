@@ -281,8 +281,8 @@ const Home: NextPage = () => {
             />
 
             <p className="font-shark-display s-display xs:text-3xl sm:text-4xl xs:tracking-tight">
-              It's been a short time since we first aped together in Discord, on
-              Aug. 9, 2021. But the amount of creative talent and energy
+              It's been a short time since we first aped together in Discord ,
+              on Aug. 9, 2021. But the amount of creative talent and energy
               spinning up within the Shark community – inspired by the novel
               tokenomics of DAOs (and DAOs-within-DAOS), the quickly evolving
               world of NFTs and the "internet re-do" currently underway – has
@@ -321,9 +321,9 @@ const Home: NextPage = () => {
 
           <p className="font-shark-display s-display xs:text-3xl sm:text-4xl xs:tracking-tight mb-24">
             Sharks evolve the Web3 ecosystem by building a community that
-            collects Nouns, helps steer and grow the NounsDAO ecosystem, and
-            partners with artists, developers, and DAOs to create new blockchain
-            experiences.
+            collects Nouns, helping steer and grow the NounsDAO ecosystem, and
+            partnering with artists, developers, and DAOs to create new
+            blockchain experiences.
             <a className="sm:hidden" id="m-values" />
           </p>
 
@@ -338,7 +338,7 @@ const Home: NextPage = () => {
                 Building
               </h3>
               <p className="font-shark-text text-xl">
-                Community, expereience and culture.
+                Community, experience and culture.
               </p>
             </div>
 
@@ -441,11 +441,19 @@ const Home: NextPage = () => {
               <h3 className="pb-3">Who are you?</h3>
               <p className="xs:text-xl sm:text-2xl font-shark-text">
                 SharkDAO came together over the course of a day on the chat app
-                Discord (join us here!), led by members Jango, Kenny, Goldy,
-                defi jesus and Beanie, all of whom really wanted to buy a Noun.
-                Yeah – they couldn’t afford it. But one day and sleepless night
-                later, SharkDAO could – and did, winning the auction for Noun
-                #2!
+                Discord{" "}
+                <a
+                  href="https://discord.com/invite/8aThDGXHqH"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-shark-blue hover:underline"
+                >
+                  (join us here!)
+                </a>
+                , led by members Jango, Kenny, Goldy, defi jesus and Beanie, all
+                of whom really wanted to buy a Noun. Yeah – they couldn’t afford
+                it. But one day and sleepless night later, SharkDAO could – and
+                did, winning the auction for Noun #2!
               </p>
             </div>
 
@@ -510,9 +518,17 @@ const Home: NextPage = () => {
                 Okay, I have some ETH and I want to join. How do I do that?
               </h3>
               <p className="xs:text-xl sm:text-2xl font-shark-text">
-                Re-read the risks above first. Then, join in on Juicebox: In
-                exchange for ETH, you'll receive SHARK tokens, which represent
-                your prorata share of the SharkDAO.
+                Re-read the risks above first. Then,{" "}
+                <a
+                  href="https://juicebox.money/#/p/sharkdao"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-shark-blue hover:underline"
+                >
+                  join in on Juicebox
+                </a>
+                : In exchange for ETH, you'll receive SHARK tokens, which
+                represent your prorata share of the SharkDAO.
               </p>
             </div>
 
