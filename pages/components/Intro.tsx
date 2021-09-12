@@ -5,15 +5,17 @@ import React from "react";
 const Intro = () => {
   return (
     <div>
+      {/* MOBILE */}
       <div className="sm:hidden mt-20">
         <img className="m-0 w-full" src="/shark-hero-mobile.svg" alt="shark" />
       </div>
 
+      {/* DESKTOP */}
       <div className="xs:hidden sm:flex m-auto w-5/6">
         <a id="intro" />
         <img
           className="relative right-16"
-          src="/shark-little.svg"
+          src="/shark-little-left.svg"
           alt="baby-shark"
         />
 
@@ -25,7 +27,7 @@ const Intro = () => {
         </p>
 
         <img
-          className="self-start relative left-6"
+          className="self-start flip-horizontal relative left-6"
           src="/shark-little.svg"
           alt="baby-shark"
         />

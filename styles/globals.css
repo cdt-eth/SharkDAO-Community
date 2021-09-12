@@ -70,3 +70,7 @@ a {
   font-family: "MsGothic-SharkDAOMembersOnly";
   font-weight: 700;
 }
+
+.flip-horizontal {
+  transform: scaleX(-1);
+}
