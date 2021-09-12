@@ -12,7 +12,7 @@ const FAQ = () => {
       <div className="font-shark-display s-display xs:text-3xl sm:text-4xl xs:tracking-tight">
         <div className="mb-10">
           <h3 className="pb-3">What is this?</h3>
-          <p className="xs:text-xl sm:text-2xl font-shark-text">
+          <p className="xs:text-xl sm:text-2xl font-shark-text answer">
             This is a DAO, or decentralized autonomous organization – a group of
             people, working together and pooling our resources in order to
             acquire Nouns, in order to take part in that really cool experiment
@@ -23,7 +23,7 @@ const FAQ = () => {
 
         <div className="mb-10">
           <h3 className="pb-3">Who are you?</h3>
-          <p className="xs:text-xl sm:text-2xl font-shark-text">
+          <p className="xs:text-xl sm:text-2xl font-shark-text answer">
             SharkDAO came together over the course of a day on the chat app
             Discord{" "}
             <a
@@ -43,7 +43,7 @@ const FAQ = () => {
 
         <div className="mb-10">
           <h3 className="pb-3">Okay, congratulations. What are Nouns?</h3>
-          <p className="xs:text-xl sm:text-2xl font-shark-text">
+          <p className="xs:text-xl sm:text-2xl font-shark-text answer answer">
             Nouns is a recently launched series of NFTs – one-of-a-kind pieces
             of digital ephemera, whether images or sound, or both, or neither –
             and something of an experiment. Each day, forever, one Noun will be
@@ -59,7 +59,7 @@ const FAQ = () => {
           <h3 className="pb-3">
             So Nouns is a DAO - and SharkDAO is... a DAO. Is this confusing?
           </h3>
-          <p className="xs:text-xl sm:text-2xl font-shark-text">
+          <p className="xs:text-xl sm:text-2xl font-shark-text answer">
             Yeah, it is. Our friend INVDR made these infographics to help.
           </p>
         </div>
@@ -68,7 +68,7 @@ const FAQ = () => {
           <h3 className="pb-3">
             I'm intrigued, but what are the major risks of joining?
           </h3>
-          <p className="xs:text-xl sm:text-2xl font-shark-text">
+          <div className="xs:text-xl sm:text-2xl font-shark-text answer">
             The NFT and crypto spaces are volatile - please don't put in tokens
             that you can't afford to lose completely. While all of us at Shark
             DAO are working hard and have nothing but the best intentions, we
@@ -93,14 +93,14 @@ const FAQ = () => {
                 spend illiquid, highly pixelated pineapple or chainsaw.
               </li>
             </ul>
-          </p>
+          </div>
         </div>
 
         <div className="mb-10">
           <h3 className="pb-3">
             Okay, I have some ETH and I want to join. How do I do that?
           </h3>
-          <p className="xs:text-xl sm:text-2xl font-shark-text">
+          <p className="xs:text-xl sm:text-2xl font-shark-text answer">
             Re-read the risks above first. Then,{" "}
             <a
               href="https://juicebox.money/#/p/sharkdao"
@@ -119,7 +119,7 @@ const FAQ = () => {
           <h3 className="pb-3">
             I regret my decision – how do get my ETH back?{" "}
           </h3>
-          <p className="xs:text-xl sm:text-2xl font-shark-text">
+          <p className="xs:text-xl sm:text-2xl font-shark-text answer">
             SharkDAO’s tokens, its liquidity, is unlocked for a window each day
             ahead of the Nouns auction for that day. You can exchange your SHARK
             for ETH, minus the 5% fee charged by JuiceBox, at any time during

@@ -5,6 +5,14 @@
 
 @layer base {
   @font-face {
+    font-family: "AUTHENTICSans-90";
+    src: url(/fonts/AUTHENTICSans-90.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
     font-family: "MsGothic-SharkDAOMembersOnly";
     src: url(/fonts/MsGothic-SharkDAOMembersOnly-Heavy.woff) format("woff");
     font-weight: 700;
@@ -73,4 +81,8 @@ a {
 
 .flip-horizontal {
   transform: scaleX(-1);
+}
+
+.answer {
+  font-family: "AUTHENTICSans-90" !important;
 }
