@@ -23,7 +23,7 @@ const Values = () => {
             Innovative
           </h3>
           <p className="font-shark-text text-xl">
-            Speed, collaboration to drive growth.
+            Speed and collaboration to drive growth.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ const Values = () => {
             Ecosystems
           </h3>
           <p className="font-shark-text text-xl">
-            Creating value around the Nouns, NFT, and Web3 space.
+            Creating value around the Nouns, NFT, and the Web3 space.
           </p>
           <a className="sm:hidden" id="m-community" />
         </div>
