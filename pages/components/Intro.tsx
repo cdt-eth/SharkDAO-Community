@@ -15,7 +15,7 @@ const Intro = () => {
         <a id="intro" />
         <img
           className="relative right-16"
-          src="/shark-little-left.svg"
+          src="/shark-little.svg"
           alt="baby-shark"
         />
 
@@ -44,7 +44,8 @@ const Intro = () => {
 
         <img
           className="pt-8 pb-12 m-auto"
-          src="/nouns-2-5.svg"
+          // src="/nouns-2-5.svg"
+          src="/NounsToExportAsSingle.svg"
           alt="nouns-2-5"
         />
 
