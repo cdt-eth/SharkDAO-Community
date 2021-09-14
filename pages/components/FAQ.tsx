@@ -32,7 +32,16 @@ const FAQ = () => {
             So Nouns is a DAO - and SharkDAO is... a DAO. Is this confusing?
           </h3>
           <p className="xs:text-xl sm:text-2xl font-shark-text answer">
-            Yeah, it is. Our friend INVDR made these infographics to help.
+            Yeah, it is. Our friend{" "}
+            <a
+              href="https://invdr.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-shark-blue hover:underline"
+            >
+              INVDR
+            </a>{" "}
+            made these infographics to help.
           </p>
         </div>
 
