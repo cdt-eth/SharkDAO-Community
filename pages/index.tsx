@@ -1,18 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from "next";
-
 import Community from "./components/Community";
-import DesktopNav from "./components/Desktop/DesktopNav";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import Mission from "./components/Mission";
 import TheBasics from "./components/TheBasics";
 import Values from "./components/Values";
 import Intro from "./components/Intro";
-import Menu from "./components/Mobile/Menu";
-import DesktopLogo from "./components/Desktop/DesktopLogo";
 import Header from "./components/Header";
+import Podcast from "./components/Podcast";
+import Nav from "./components/Nav";
 
 const Home: NextPage = () => {
   return (
@@ -20,16 +18,13 @@ const Home: NextPage = () => {
       <Header />
 
       <main>
-        <div className="xs:p-6 sm:px-5 sm:py-2 ">
-          <DesktopLogo />
-          <DesktopNav />
+        <Nav />
 
-          {/* MOBILE */}
-          <Menu />
+        {/* <div className="xs:p-6 sm:px-5 sm:py-2  sm:flex"> 
+         <Menu /> 
+         </div> */}
 
-          <Intro />
-        </div>
-
+        <Intro />
         <TheBasics />
 
         <div className="xs:px-6 sm:w-4/6 m-auto py-20">
@@ -37,6 +32,7 @@ const Home: NextPage = () => {
           <Values />
           <Community />
           <FAQ />
+          <Podcast />
         </div>
       </main>
 

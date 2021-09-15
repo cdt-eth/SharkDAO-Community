@@ -7,30 +7,40 @@ const Intro = () => {
     "SharkDAO started as a group of Internet strangers interested in pooling together resources to acquire Nouns, a novel experiment in generative, code-driven art. Since we started on August 9, 2021, we’ve acquired 4 nouns, brought together over 400 Sharks, and raised almost 1000 ETH. We are here to evolve the Web3 ecosystem. Let's BITE.";
 
   return (
-    <div>
+    <div className="xs:px-6 sm:px-0">
       {/* MOBILE */}
       <div className="sm:hidden mt-20">
         <img className="m-0 w-full" src="/shark-hero-mobile.svg" alt="shark" />
       </div>
 
       {/* DESKTOP */}
-      <div className="xs:hidden sm:flex m-auto w-5/6">
+      <div className="xs:hidden sm:flex m-auto w-5/6 flex-col">
         <a id="intro" />
-        <img
-          className="relative right-16"
-          src="/shark-little.svg"
-          alt="baby-shark"
-        />
+        <div className=" xs:hidden sm:flex  pt-20 sm:px-40  lg:px-40  justify-center relative mb-16">
+          <a id="home" />
+          <img
+            className="w-full "
+            src="/shark-hero-bubble.svg"
+            alt="welcome-shark"
+          />
+        </div>
+        <div className="flex">
+          <img
+            className="relative right-16"
+            src="/shark-little.svg"
+            alt="baby-shark"
+          />
 
-        <p className="font-shark-display s-display s-display  sm:text-4xl xs:tracking-tight mx-10">
-          {IntroCopy}
-        </p>
+          <p className="font-shark-display s-display s-display  sm:text-4xl xs:tracking-tight mx-10">
+            {IntroCopy}
+          </p>
 
-        <img
-          className="self-start flip-horizontal relative left-6"
-          src="/shark-little.svg"
-          alt="baby-shark"
-        />
+          <img
+            className="self-start flip-horizontal relative left-6"
+            src="/shark-little.svg"
+            alt="baby-shark"
+          />
+        </div>
       </div>
 
       <a id="m-intro" />
