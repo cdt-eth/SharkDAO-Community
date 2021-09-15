@@ -9,7 +9,7 @@ const DesktopNav = () => {
         <ScrollLink
           to="intro"
           smooth={true}
-          className="cursor-pointer hover:text-shark-blue flex pb-2"
+          className="cursor-pointer hover:text-shark-dark-blue flex pb-2"
         >
           Intro
         </ScrollLink>
@@ -17,7 +17,7 @@ const DesktopNav = () => {
         <ScrollLink
           to="the-basics"
           smooth={true}
-          className="cursor-pointer hover:text-shark-blue flex pb-2"
+          className="cursor-pointer hover:text-shark-dark-blue flex pb-2"
         >
           The Basics
         </ScrollLink>
@@ -25,7 +25,7 @@ const DesktopNav = () => {
         <ScrollLink
           to="mission"
           smooth={true}
-          className="cursor-pointer hover:text-shark-blue flex pb-2"
+          className="cursor-pointer hover:text-shark-dark-blue flex pb-2"
         >
           Mission
         </ScrollLink>
@@ -33,7 +33,7 @@ const DesktopNav = () => {
         <ScrollLink
           to="values"
           smooth={true}
-          className="cursor-pointer hover:text-shark-blue flex pb-2"
+          className="cursor-pointer hover:text-shark-dark-blue flex pb-2"
         >
           Values
         </ScrollLink>
@@ -41,7 +41,7 @@ const DesktopNav = () => {
         <ScrollLink
           to="community"
           smooth={true}
-          className="cursor-pointer hover:text-shark-blue flex pb-2"
+          className="cursor-pointer hover:text-shark-dark-blue flex pb-2"
         >
           Community
         </ScrollLink>
@@ -49,7 +49,7 @@ const DesktopNav = () => {
         <ScrollLink
           to="faq"
           smooth={true}
-          className="cursor-pointer hover:text-shark-blue flex pb-2"
+          className="cursor-pointer hover:text-shark-dark-blue flex pb-2"
         >
           FAQ
         </ScrollLink>

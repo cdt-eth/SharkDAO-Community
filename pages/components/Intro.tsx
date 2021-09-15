@@ -41,7 +41,7 @@ const Intro = () => {
 
         <img
           className="pt-8 sm:pb-12 m-auto"
-          src="/NounsToExportAsSingle.svg"
+          src="/nouns.png"
           alt="nouns-2-5"
         />
       </div>
