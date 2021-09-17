@@ -22,14 +22,14 @@ const FAQ = () => {
               Nouns
             </a>{" "}
             are fun characters. One is created each day and auctioned off. The
-            auction proceeds are controlled by Noun owners- each Noun has one
+            auction proceeds are controlled by Noun owners &mdash; each Noun has one
             vote in NounsDAO.
           </p>
         </div>
 
         <div className="mb-10">
           <h3 className="pb-3">
-            So Nouns is a DAO - and SharkDAO is... a DAO. Is this confusing?
+            So Nouns is a DAO &mdash; and SharkDAO is... a DAO. Is this confusing?
           </h3>
           <p className="xs:text-xl sm:text-2xl font-shark-text answer">
             Yeah, it is. Our friend{" "}
