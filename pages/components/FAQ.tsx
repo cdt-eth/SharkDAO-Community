@@ -156,7 +156,7 @@ const FAQ = () => {
             First, please read the risks associated with joining SharkDAO before
             making your decision. There are two ways to join SharkDAO: Juicebox
             and Sushiswap. We recommend Juicebox because your ETH would go
-            directly to the
+            directly to the{" "}
             <a
               href="https://juicebox.money/#/p/sharkdao"
               target="_blank"
@@ -174,7 +174,7 @@ const FAQ = () => {
             >
               Discord
             </a>{" "}
-            and follow the instructions in #join.Re-read the risks above first.
+            and follow the instructions in #join. Re-read the risks above first.
             Then, in exchange for ETH, you'll receive SHARK tokens, which
             represent your prorata share of the SharkDAO.
           </p>
