@@ -17,6 +17,16 @@ import Header from "./components/Header";
 const Home: NextPage = () => {
   return (
     <div>
+      <div className="bg-shark-blue text-2xl px-5 py-3 text-center text-shark-white font-bold">
+        <a
+          className="hover:text-shark-black hover:underline"
+          href="https://juicebox.money/#/p/sharkdao"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Join SharkDAO today!
+        </a>
+      </div>
       <Header />
 
       <main>
