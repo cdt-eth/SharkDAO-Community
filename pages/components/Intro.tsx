@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Noun from "./Noun";
 
 const Intro = () => {
   const IntroCopy =
@@ -49,11 +50,33 @@ const Intro = () => {
           {IntroCopy}
         </p>
 
-        <img
-          className="pt-8 sm:pb-12 m-auto"
-          src="/nouns.png"
-          alt="nouns-2-5"
-        />
+        <div className="pt-8 sm:pb-12 m-auto flex xs:flex-wrap sm:justify-center">
+          <Noun number={2} />
+          <Noun number={5} />
+          <Noun number={15} />
+          <Noun number={33} />
+          <Noun number={47} />
+          {/* <img
+            className="xs:w-1/2 sm:w-1/4 hover:cursor-pointer hover:scale-110 transition duration-200"
+            src="/noun-2.png"
+            alt="nouns-2-5"
+          />
+          <img
+            className="xs:w-1/2 sm:w-1/4 hover:cursor-pointer hover:scale-110 transition duration-200"
+            src="/noun-5.png"
+            alt="nouns-2-5"
+          />
+          <img
+            className="xs:w-1/2 sm:w-1/4 hover:cursor-pointer hover:scale-110 transition duration-200"
+            src="/noun-15.png"
+            alt="nouns-2-5"
+          />
+          <img
+            className="xs:w-1/2 sm:w-1/4 hover:cursor-pointer hover:scale-110 transition duration-200"
+            src="/noun-33.png"
+            alt="nouns-2-5"
+          /> */}
+        </div>
       </div>
     </div>
   );
