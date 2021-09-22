@@ -5,11 +5,21 @@ interface NounProps {
   number: number;
 }
 
+const twitter: any = {
+  2: "https://twitter.com/pina_noun",
+  5: "https://twitter.com/bruce_noun",
+  15: "https://twitter.com/morpheus_noun",
+  33: "https://twitter.com/froger_noun",
+  47: "https://twitter.com/sharkdao",
+};
+
 const Noun = ({ number }: NounProps) => {
+  const handle = twitter[number];
+
   return (
     <a
       className="xs:w-1/2 sm:w-1/5 hover:cursor-pointer hover:scale-110 transition duration-200"
-      href={`https://rainbow.me/sharkdao.eth?family=nouns&nft=0x9c8ff314c9bc7f6e59a9d9225fb22946427edc03_${number}`}
+      href={handle}
       target="_blank"
       rel="noreferrer"
     >
