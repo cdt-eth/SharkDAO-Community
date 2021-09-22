@@ -4,7 +4,7 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 const MobileNav = () => {
   return (
     <div>
-      <div className="flex-1 w-2/6  font-shark-display s-display text-xl">
+      <div className="flex-1 w-full mr-4  font-shark-display s-display text-xl">
         <ScrollLink
           to="m-intro"
           spy={true}

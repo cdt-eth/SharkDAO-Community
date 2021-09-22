@@ -11,6 +11,9 @@ import Intro from "./components/Intro";
 import Header from "./components/Header";
 import Podcast from "./components/Podcast";
 import Nav from "./components/Nav";
+import Menu from "./components/Mobile/Menu";
+import DesktopLogo from "./components/Desktop/Desktop";
+import DesktopNav from "./components/Desktop/DesktopNav";
 
 const Home: NextPage = () => {
   return (
@@ -28,11 +31,21 @@ const Home: NextPage = () => {
       <Header />
 
       <main>
-        <Nav />
+        {/* <Nav /> */}
 
         {/* <div className="xs:p-6 sm:px-5 sm:py-2  sm:flex"> 
          <Menu /> 
          </div> */}
+
+        <div className="xs:p-6 sm:px-5 sm:py-2 ">
+          <DesktopLogo />
+          <DesktopNav />
+
+          {/* MOBILE */}
+          <Menu />
+
+          {/* <Intro /> */}
+        </div>
 
         <Intro />
         <TheBasics />

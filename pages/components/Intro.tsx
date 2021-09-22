@@ -56,26 +56,6 @@ const Intro = () => {
           <Noun number={15} />
           <Noun number={33} />
           <Noun number={47} />
-          {/* <img
-            className="xs:w-1/2 sm:w-1/4 hover:cursor-pointer hover:scale-110 transition duration-200"
-            src="/noun-2.png"
-            alt="nouns-2-5"
-          />
-          <img
-            className="xs:w-1/2 sm:w-1/4 hover:cursor-pointer hover:scale-110 transition duration-200"
-            src="/noun-5.png"
-            alt="nouns-2-5"
-          />
-          <img
-            className="xs:w-1/2 sm:w-1/4 hover:cursor-pointer hover:scale-110 transition duration-200"
-            src="/noun-15.png"
-            alt="nouns-2-5"
-          />
-          <img
-            className="xs:w-1/2 sm:w-1/4 hover:cursor-pointer hover:scale-110 transition duration-200"
-            src="/noun-33.png"
-            alt="nouns-2-5"
-          /> */}
         </div>
       </div>
     </div>
