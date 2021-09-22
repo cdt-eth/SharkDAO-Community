@@ -50,7 +50,7 @@ const Intro = () => {
           {IntroCopy}
         </p>
 
-        <div className="pt-8 sm:pb-12 m-auto flex xs:flex-wrap sm:justify-center">
+        <div className="pt-8 sm:pb-12 m-auto flex xs:flex-wrap justify-center">
           <Noun number={2} />
           <Noun number={5} />
           <Noun number={15} />
