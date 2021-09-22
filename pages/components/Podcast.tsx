@@ -19,16 +19,16 @@ const links = [
     link: "https://anchor.fm/sharkdao",
     image: anchor,
   },
-  {
-    platform: "apple",
-    link: "",
-    image: apple,
-  },
-  {
-    platform: "overcast",
-    link: "",
-    image: overcast,
-  },
+  // {
+  //   platform: "apple",
+  //   link: "",
+  //   image: apple,
+  // },
+  // {
+  //   platform: "overcast",
+  //   link: "",
+  //   image: overcast,
+  // },
   {
     platform: "google",
     link: "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82YTE5OTJlNC9wb2RjYXN0L3Jzcw==",
