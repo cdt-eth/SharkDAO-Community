@@ -5,7 +5,7 @@ import Noun from "./Noun";
 
 const Intro = () => {
   const IntroCopy =
-    "SharkDAO started as a group of Internet strangers interested in pooling together resources to acquire Nouns, a novel experiment in generative, code-driven art. Since we started on August 9, 2021, we’ve acquired 4 nouns, brought together over 400 Sharks, and raised almost 1000 ETH. We are here to evolve the Web3 ecosystem. Let's BITE.";
+    "SharkDAO started as a group of Internet strangers interested in pooling together resources to acquire Nouns, a novel experiment in generative, code-driven art. Since we started on August 9, 2021, we’ve acquired 5 nouns, brought together over 400 Sharks, and raised almost 1000 ETH. We are here to evolve the Web3 ecosystem. Let's BITE.";
 
   return (
     <div className="xs:px-6 sm:px-0">
