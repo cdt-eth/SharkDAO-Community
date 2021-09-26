@@ -10,7 +10,7 @@ const twitter: any = {
   5: "https://twitter.com/bruce_noun",
   15: "https://twitter.com/morpheus_noun",
   33: "https://twitter.com/froger_noun",
-  47: "https://twitter.com/sharkdao",
+  47: "https://twitter.com/swimshady_noun",
 };
 
 const Noun = ({ number }: NounProps) => {
