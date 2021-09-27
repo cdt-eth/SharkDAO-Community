@@ -90,3 +90,41 @@ a {
 .nav {
   font-family: "AUTHENTICSans-90" !important;
 }
+
+.island {
+  -webkit-user-drag: none;
+}
+
+.cutoff {
+  top: 470px;
+  left: 400px;
+  max-width: fit-content;
+  z-index: 999;
+  overflow-y: hidden;
+}
+
+.littleShark {
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+}
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.two {
+  left: 470px;
+  top: 460px;
+}
