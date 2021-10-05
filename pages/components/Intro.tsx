@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import FooterLink from "./FooterLink";
 import Noun from "./Noun";
 
 const Intro = () => {
@@ -33,7 +34,22 @@ const Intro = () => {
           />
 
           <p className="font-shark-display s-display s-display  sm:text-4xl xs:tracking-tight mx-10">
-            {IntroCopy}
+            {/* {IntroCopy} */}
+            SharkDAO started as a group of Internet strangers who joined forces
+            to acquire{" "}
+            <a
+              className="text-shark-blue hover:underline hover:cursor-pointer"
+              href="https://nouns.wtf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Nouns
+            </a>
+            . Since August 9, 2021, we’ve acquired 5 nouns, gathered over 600
+            Sharks, and raised almost 1000 ETH.
+            <br />
+            <br />
+            We are evolving the Web3 ecosystem. Let's BITE.
           </p>
 
           <img
@@ -47,7 +63,22 @@ const Intro = () => {
       <a id="m-intro" />
       <div className="xs:w-full sm:w-4/6 m-auto py-14 pt-7">
         <p className="font-shark-display s-display xs:text-3xl sm:text-4xl xs:tracking-tight sm:hidden">
-          {IntroCopy}
+          {/* {IntroCopy} */}
+          SharkDAO started as a group of Internet strangers who joined forces to
+          acquire{" "}
+          <a
+            className="text-shark-blue hover:underline hover:cursor-pointer"
+            href="https://nouns.wtf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Nouns
+          </a>
+          . Since August 9, 2021, we’ve acquired 5 nouns, gathered over 600
+          Sharks, and raised almost 1000 ETH.
+          <br />
+          <br />
+          We are evolving the Web3 ecosystem. Let's BITE.
         </p>
 
         <div className="pt-8 sm:pb-12 m-auto flex xs:flex-wrap justify-center">

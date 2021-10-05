@@ -1,21 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import dynamic from "next/dynamic";
+import Grid from "./components/Island/Grid";
+
+const BgImage = dynamic(() => import("./components/Island/IslandBG"), {
+  ssr: false,
+});
 
 const Island = () => {
   return (
     <div>
-      <div className="absolute ">
-        <img className="island" src="island/island.gif" alt="island" />
-      </div>
-      <div className="cutoff relative">
-        <img className="littleShark" src="/shark-little.svg" alt="baby-shark" />
-      </div>
-      <div className="cutoff relative two">
-        <img className="littleShark" src="/shark-little.svg" alt="baby-shark" />
-      </div>
-      <div className="cutoff relative three">
-        <img className="littleShark" src="/shark-little.svg" alt="baby-shark" />
-      </div>
+      <Grid />
+
+      <BgImage passedClass={"z-0"} imagePath={`/island/island.gif`} />
     </div>
   );
 };

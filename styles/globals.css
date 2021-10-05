@@ -91,15 +91,13 @@ a {
   font-family: "AUTHENTICSans-90" !important;
 }
 
+/* Island */
 .island {
   -webkit-user-drag: none;
 }
 
+/* Shark */
 .cutoff {
-  top: 470px;
-  left: 400px;
-  max-width: fit-content;
-  z-index: 999;
   overflow-y: hidden;
 }
 
@@ -124,7 +122,11 @@ a {
   }
 }
 
-.two {
-  left: 470px;
-  top: 460px;
+/* Grid */
+.islandGrid {
+  height: 100vh;
+}
+
+.z-0 {
+  z-index: -10;
 }
