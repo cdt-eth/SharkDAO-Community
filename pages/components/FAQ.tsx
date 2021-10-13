@@ -22,14 +22,15 @@ const FAQ = () => {
               Nouns
             </a>{" "}
             are fun characters. One is created each day and auctioned off. The
-            auction proceeds are controlled by Noun owners &mdash; each Noun has one
-            vote in NounsDAO.
+            auction proceeds are controlled by Noun owners &mdash; each Noun has
+            one vote in NounsDAO.
           </p>
         </div>
 
         <div className="mb-10">
           <h3 className="pb-3">
-            So Nouns is a DAO &mdash; and SharkDAO is... a DAO. Is this confusing?
+            So Nouns is a DAO &mdash; and SharkDAO is... a DAO. Is this
+            confusing?
           </h3>
           <p className="xs:text-xl sm:text-2xl font-shark-text answer">
             Yeah, it is. Our friend{" "}
@@ -153,30 +154,15 @@ const FAQ = () => {
         <div className="mb-10">
           <h3 className="pb-3">How do I join?</h3>
           <p className="xs:text-xl sm:text-2xl font-shark-text answer">
-            First, please read the risks associated with joining SharkDAO before
-            making your decision. There are two ways to join SharkDAO: Juicebox
-            and Sushiswap. We recommend Juicebox because your ETH would go
-            directly to the{" "}
+            Joining instructions are in the{" "}
             <a
-              href="https://juicebox.money/#/p/sharkdao"
+              href="https://discord.gg/CFQ97WzzUd"
               target="_blank"
               rel="noreferrer"
               className="text-shark-blue hover:underline"
             >
-              SharkDAO Treasury
-            </a>
-            . Then go to our{" "}
-            <a
-              href="https://discord.gg/QaGYuKJTVt"
-              target="_blank"
-              rel="noreferrer"
-              className="text-shark-blue hover:underline"
-            >
-              Discord
+              Discord server.
             </a>{" "}
-            and follow the instructions in #join. Re-read the risks above first.
-            Then, in exchange for ETH, you'll receive SHARK tokens, which
-            represent your prorata share of the SharkDAO.
           </p>
         </div>
       </div>
