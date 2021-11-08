@@ -1,0 +1,92 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "AUTHENTICSans-90";
+    src: url(/fonts/AUTHENTICSans-90.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "MsGothic-SharkDAOMembersOnly";
+    src: url(/fonts/MsGothic-SharkDAOMembersOnly-Heavy.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "MsGothic-SharkDAOMembersOnly";
+    src: url(/fonts/MsGothic-SharkDAOMembersOnly-Black.woff) format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "MsGothic-SharkDAOMembersOnly";
+    src: url(/fonts/MsGothic-SharkDAOMembersOnly-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    src: url(/fonts/MsGothic-SharkDAOMembersOnly-Regular.woff) format("woff");
+    font-family: "MsGothic-SharkDAOMembersOnly";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.shark {
+  position: absolute;
+  left: 37.36%;
+  right: 37.29%;
+  top: 3.8%;
+  bottom: 91.22%;
+}
+
+.border-3 {
+  border-width: 3px;
+}
+
+.s-display {
+  font-family: "MsGothic-SharkDAOMembersOnly";
+  font-weight: 700;
+}
+
+.flip-horizontal {
+  transform: scaleX(-1);
+}
+
+.answer {
+  font-family: "AUTHENTICSans-90" !important;
+}
+
+.nav {
+  font-family: "AUTHENTICSans-90" !important;
+}
