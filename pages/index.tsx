@@ -14,6 +14,7 @@ import Nav from "./components/Nav";
 import Menu from "./components/Mobile/Menu";
 import DesktopLogo from "./components/Desktop/Desktop";
 import DesktopNav from "./components/Desktop/DesktopNav";
+import Mint from "./components/Mint";
 
 const Home: NextPage = () => {
   return (
@@ -56,6 +57,7 @@ const Home: NextPage = () => {
           <Community />
           <FAQ />
           <Podcast />
+          <Mint/>
         </div>
       </main>
 
