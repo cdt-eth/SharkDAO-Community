@@ -57,7 +57,6 @@ const Home: NextPage = () => {
           <Community />
           <FAQ />
           <Podcast />
-          <Mint/>
         </div>
       </main>
 
