@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import CommNFT from "./CommNFT";
 import { InjectedConnector } from "@web3-react/injected-connector";
+import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { useWeb3React } from "@web3-react/core";
 import { ApprovedMintsRes } from "../api/approved";
 import {ethers} from 'ethers';
@@ -9,6 +10,12 @@ const injected = new InjectedConnector({
   supportedChainIds: [1, 4]
 });
 
+const walletconnect = new WalletConnectConnector({
+  rpc: {
+    1: process.env.REACT_APP_RPC_URL!
+  },
+  qrcode: true
+})
 
 const Mint = () => {
 
@@ -17,9 +24,17 @@ const Mint = () => {
   
   const { active, account, activate, deactivate } = useWeb3React();
 
-  const connect = async () => {
+  const connectMM = async () => {
     try{
       await activate(injected)
+    } catch(err) {
+      console.log(err);
+    }
+  };
+
+  const connectWC = async () => {
+    try{
+      await activate(walletconnect);
     } catch(err) {
       console.log(err);
     }
@@ -34,15 +49,11 @@ const Mint = () => {
       
     }
   }
-
-  const getMintsRes = async() => {
-
-
-
+  
+  const getMintsRes = useCallback(async() => {
     const bodyApproved = {
       address: account
     }
-
     const resApproved = await fetch('/api/approved', {
       method: "POST",
       headers: {
@@ -53,14 +64,20 @@ const Mint = () => {
     const approved: ApprovedMintsRes  = await resApproved.json();
     setEligbleNfts(approved['ids']);
     setCheckedEligible(true);
-  }
-
+  }, [account]);
+  
+  useEffect(() => {
+    if(account) {
+      console.log("useEffect");
+      getMintsRes();
+    }
+  }, [account, getMintsRes]);
   return (
     <div>
-      {!active && <button onClick={connect}>CONNENCT</button>}
+      {!active && <button onClick={connectMM}>CONNENCT WITH MM</button>}
+      {!active && <button onClick={connectWC}>CONNENCT WALLET CONNECT</button>}
       {active && account}
       {active && <button onClick={disconnect}>DISCONNECT</button>}
-      {active ? <button onClick={getMintsRes}> Show Eligible NFTs </button> : <div></div>}
       { checkedEligible &&
           eligbleNfts.length == 0 ? 
           <h3>You are not elibile for any mints, but you may be eligible for other mints in the future</h3> :
