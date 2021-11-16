@@ -6,32 +6,31 @@ import { useWeb3React } from "@web3-react/core";
 import { ApprovedMintsRes } from "../api/approved";
 
 const injected = new InjectedConnector({
-  supportedChainIds: [1, 4]
+  supportedChainIds: [1, 4],
 });
 
 const walletconnect = new WalletConnectConnector({
   rpc: {
-    1: process.env.REACT_APP_RPC_URL!
-  }
-})
+    1: process.env.REACT_APP_RPC_URL!,
+  },
+});
 
 const Mint = () => {
-
   const [eligbleNfts, setEligbleNfts] = useState<Number[]>([]);
   const { active, account, activate, deactivate } = useWeb3React();
 
   const connectMM = async () => {
-    try{
-      await activate(injected)
-    } catch(err) {
+    try {
+      await activate(injected);
+    } catch (err) {
       console.log(err);
     }
   };
 
   const connectWC = async () => {
-    try{
+    try {
       await activate(walletconnect);
-    } catch(err) {
+    } catch (err) {
       console.log(err);
     }
   };
@@ -41,20 +40,19 @@ const Mint = () => {
       await deactivate()
     } catch (err) {
       console.log(err);
-      
     }
-  }
-  
-  const getMintsRes = useCallback(async() => {
+  };
+
+  const getMintsRes = useCallback(async () => {
     const bodyApproved = {
-      address: account
-    }
-    const resApproved = await fetch('/api/approved', {
+      address: account,
+    };
+    const resApproved = await fetch("/api/approved", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(bodyApproved)
+      body: JSON.stringify(bodyApproved),
     });
     const approved: ApprovedMintsRes  = await resApproved.json();
     setEligbleNfts(approved['ids']);
@@ -78,7 +76,7 @@ const Mint = () => {
   }
 
   useEffect(() => {
-    if(account) {
+    if (account) {
       getMintsRes();
     }
   }, [account, getMintsRes]);
@@ -90,7 +88,7 @@ const Mint = () => {
       {active && <button onClick={disconnect}>DISCONNECT</button>}      
       {active ? connectedContent() : disconnectedContent()}
     </div>
-    )
-}
+  );
+};
 
 export default Mint;
