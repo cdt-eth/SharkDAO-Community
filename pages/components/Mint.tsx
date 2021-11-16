@@ -13,8 +13,7 @@ const injected = new InjectedConnector({
 const walletconnect = new WalletConnectConnector({
   rpc: {
     1: process.env.REACT_APP_RPC_URL!
-  },
-  qrcode: true
+  }
 })
 
 const Mint = () => {
