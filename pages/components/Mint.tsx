@@ -7,6 +7,7 @@ import { useWeb3React } from "@web3-react/core";
 import { ApprovedMintsRes } from "../api/approved";
 import { ethers } from "ethers";
 import Link from "next/link";
+import Header from "./Header";
 
 const injected = new InjectedConnector({
   supportedChainIds: [1, 4],
@@ -76,6 +77,7 @@ const Mint = () => {
 
   return (
     <div>
+      <Header />
       <div className="">
         <div className="flex sm:gap-8 my-6 justify-between items-center h-full ">
           <div className="xs:hidden sm:flex sm:w-1/2">
