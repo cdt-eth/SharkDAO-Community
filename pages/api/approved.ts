@@ -15,20 +15,24 @@ type WhitelistData = {
 export default function getApprovedMints(
   req: NextApiRequest,
   res: NextApiResponse<ApprovedMintsRes>
-  ) {
+) {
   const { address } = req.body;
-  const lowerAddress = address.toLowerCase();
-  
-  let approved: Array<Number> = [];
-  const merkleLeaves:WhitelistData[] = whitelistData['whitelist'];
-  merkleLeaves.forEach((element) => {
-    
-    element['leaves'].forEach((leaf) => {
-      if(leaf === lowerAddress){
-        approved.push(element['id']);
-      }
+  if (address == undefined || address == null) {
+    res.status(200).json({ ids: [] });
+  } else {
+    const lowerAddress = address.toLowerCase();
+
+    let approved: Array<Number> = [];
+    const merkleLeaves: WhitelistData[] = whitelistData['whitelist'];
+    merkleLeaves.forEach((element) => {
+
+      element['leaves'].forEach((leaf) => {
+        if (leaf === lowerAddress) {
+          approved.push(element['id']);
+        }
+      });
     });
-  });
-  res.status(200).json({ ids: approved })
+    res.status(200).json({ ids: approved })
+  }
 }
 

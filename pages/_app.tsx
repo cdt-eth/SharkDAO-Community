@@ -1,10 +1,12 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Web3ReactProvider } from "@web3-react/core";
-import {ethers} from 'ethers';
+import { ethers } from 'ethers';
+
 
 function getLibrary(provider: any) {
-  return ethers.getDefaultProvider();
+  const library = new ethers.providers.Web3Provider(provider);
+  return library;
 }
 
 function MyApp({ Component, pageProps }: AppProps) {

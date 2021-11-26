@@ -5,50 +5,82 @@ import { InjectedConnector } from "@web3-react/injected-connector";
 import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { useWeb3React } from "@web3-react/core";
 import { ApprovedMintsRes } from "../api/approved";
-import { ethers } from "ethers";
 import Link from "next/link";
 import Header from "./Header";
 
-const injected = new InjectedConnector({
-  supportedChainIds: [1, 4],
-});
-
-const walletconnect = new WalletConnectConnector({
-  rpc: {
-    1: process.env.REACT_APP_RPC_URL!,
-  },
-});
+import { Menu } from "@headlessui/react";
 
 const Mint = () => {
   const [eligbleNfts, setEligbleNfts] = useState<Number[]>([]);
   const [checkedEligible, setCheckedEligible] = useState<boolean>(false);
-
+  const [activeAccount, setActiveAccount] = useState<Boolean>(false);
+  
   const { active, account, activate, deactivate } = useWeb3React();
 
   const connectMM = async () => {
+    const injected = new InjectedConnector({
+      supportedChainIds: [1, 4],
+    });
     try {
       await activate(injected);
+      setActiveAccount(true);
     } catch (err) {
       console.log(err);
     }
   };
 
   const connectWC = async () => {
+    const walletconnect = new WalletConnectConnector({
+      rpc: {
+        1: process.env.REACT_APP_RPC_URL!,
+      },
+    });
     try {
       await activate(walletconnect);
+      setActiveAccount(active);
     } catch (err) {
       console.log(err);
     }
   };
 
-  const disconnect = async () => {
-    try {
-      await deactivate();
+  function handleDisconnect() {
+    if (activeAccount) {
+      deactivate();
+      setActiveAccount(false);
       setCheckedEligible(false);
-    } catch (err) {
-      console.log(err);
+      setEligbleNfts([]);
     }
-  };
+  }
+
+  const MMContent = () => {
+    return(
+      <button
+        className={`xs:w-1/3 py-2 px-1 sm:w-28 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${activeAccount
+            ? "bg-shark-dark-blue text-white"
+            : "bg-shark-blue text-white"
+          }`}
+        onClick={connectMM}
+      >
+        <img className="w-1/5" src="m.png" alt="mm" />
+        MetaMask
+      </button>
+    )
+  }
+
+  const WCContent = () => {
+    return(
+      <button
+        className={`xs:w-1/3 py-2 px-1 sm:w-28 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${activeAccount
+            ? "bg-shark-dark-blue text-white"
+            : "bg-shark-blue text-white"
+          }`}
+        onClick={connectWC}
+      >
+        <img className="w-1/5" src="w.png" alt="mm" />
+        WalletConnect
+      </button>
+    )
+  }
 
   const getMintsRes = useCallback(async () => {
     const bodyApproved = {
@@ -68,12 +100,11 @@ const Mint = () => {
 
   const shortAddress = account?.substr(0, 4) + "..." + account?.substr(38, 4);
 
-  useEffect(() => {
-    if (account) {
-      console.log("useEffect");
+  useEffect(() => {  
+    if (activeAccount) {
       getMintsRes();
     }
-  }, [account, getMintsRes]);
+  }, [activeAccount, getMintsRes]);
 
   return (
     <div>
@@ -103,36 +134,30 @@ const Mint = () => {
               </div>
 
               <div className="font-shark-display-heavy sm:text-xl tracking-tight ">
-                {active && account && shortAddress}
+                {activeAccount && shortAddress}
               </div>
             </div>
 
-            <div className=" xs:flex xs:flex-row xs:gap-4 xs:justify-center ">
-              <button
-                className={`xs:w-1/3 py-2 px-1 sm:w-28 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${
-                  active
-                    ? "bg-shark-dark-blue text-white"
-                    : "bg-shark-blue text-white"
-                }`}
-                onClick={connectMM}
-              >
-                <img className="w-1/5" src="m.png" alt="mm" />
-                {active ? "Disconnect" : "Connect "}
-              </button>
-
-              <button
-                className={`xs:w-1/3 py-2 px-1 sm:w-28 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${
-                  active
-                    ? "bg-shark-dark-blue text-white"
-                    : "bg-shark-blue text-white"
-                }`}
-                onClick={connectWC}
-              >
-                <img className="w-1/5" src="w.png" alt="mm" />
-                {active ? "Disconnect" : "Connect"}
-              </button>
+            <div>
+              {activeAccount ? (
+                <button onClick={handleDisconnect}>
+                  Disconnect
+                </button>
+              ) : (
+                <Menu as="div">
+                  <Menu.Button as="button">Connect</Menu.Button>
+                    <Menu.Items>
+                      <Menu.Item as="button"> 
+                        {MMContent}
+                      </Menu.Item>
+                      <Menu.Item as="button"> 
+                        {WCContent} 
+                      </Menu.Item>
+                    </Menu.Items>
+                </Menu>
+              )}
             </div>
-            {/* {active && <button onClick={disconnect}>DISCONNECT</button>} */}
+
           </div>
         </div>
       </div>
@@ -140,16 +165,11 @@ const Mint = () => {
       <br />
 
       <div className="flex border-6 justify-center font-shark-display xs:text-lg sm:text-3xl">
-        {active ? (
+        {activeAccount ? (
           !checkedEligible && (
-            <button
-              className={`${
-                !checkedEligible && "bg-shark-beach rounded-2xl py-2"
-              } px-3 `}
-              onClick={getMintsRes}
-            >
-              Show Eligible NFTs
-            </button>
+            <p>
+              Checking NFTs you can mint...
+            </p>
           )
         ) : (
           <div className="">Please connect your wallet.</div>
@@ -157,19 +177,17 @@ const Mint = () => {
 
         <br />
 
-        {/* Error */}
-        {checkedEligible && eligbleNfts.length == 0 ? (
+        { eligbleNfts.length === 0 && activeAccount &&
           <p className="font-shark-display  xs:text-lg sm:text-3xl my-6 sm:w-1/2 text-center tracking-tighter">
             You are not elibile for any mints, but you may be eligible for other
             mints in the future.
-          </p>
-        ) : (
+          </p> }
+          {eligbleNfts.length > 0 && 
           <div className="flex gap-4 flex-wrap">
             {eligbleNfts.map((id) => (
               <CommNFT key={id as number} id={id} />
             ))}
-          </div>
-        )}
+          </div>}
       </div>
     </div>
   );
