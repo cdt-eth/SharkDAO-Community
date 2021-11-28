@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { useWeb3React } from "@web3-react/core";
 import { ethers } from 'ethers';
 import {contractAddress, abi} from '../../contracts/sharkFeast';
+import { TransactionResponse } from "@ethersproject/abstract-provider";
 
 interface CommemorativeNFTProps {
   key: number;
@@ -10,9 +11,26 @@ interface CommemorativeNFTProps {
 }
 
 const CommNFT = ({ id }: CommemorativeNFTProps) => {
+
+  const [buttonText, setButtonText] = useState<String>("Mint");
   const { account, library } = useWeb3React();
+  
+  const getBalance = useCallback(async () => {
+    const contract = new ethers.Contract(contractAddress, abi, library.getSigner());
+    const balance = await contract.balanceOf(account, id);      
+    if (balance > 0) {
+      setButtonText("Minted!");
+    }
+  }, [account, id, library]);
+
+  useEffect(() => {
+    getBalance();
+  }, [getBalance]);
 
   const getMerkleProof = async () => {
+    if(buttonText === "Minted!") {
+      return;
+    }
     const info = {
       address: account,
       mintId: id,
@@ -28,9 +46,18 @@ const CommNFT = ({ id }: CommemorativeNFTProps) => {
     let proof = await res.json();
     proof = proof['proof'];
     const signer = await library.getSigner();
-    const contract = new ethers.Contract(contractAddress, abi, library.getSigner());
+    const contract = new ethers.Contract(contractAddress, abi, signer);
     const contractWithSigner = contract.connect(signer);
-    const pending = await contractWithSigner.mintCommemorativeShark(id, proof);
+    try {
+      const transaction: TransactionResponse = await contractWithSigner.mintCommemorativeShark(id, proof);
+      setButtonText("Pending...");
+      await transaction.wait();
+      await getBalance();
+    } catch (err) {
+      console.log(err);
+      setButtonText("Mint");
+    }
+
   };
 
   return (
@@ -45,7 +72,7 @@ const CommNFT = ({ id }: CommemorativeNFTProps) => {
         className="cursor-pointer mt-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue max-w-max shadow-md"
         onClick={getMerkleProof}
       >
-        Mint
+        {buttonText}
       </button>
     </div>
   );
