@@ -32,15 +32,12 @@ const Mint = () => {
   const connectWC = async () => {
     const walletconnect = new WalletConnectConnector({
       rpc: {
-        1: process.env.REACT_APP_RPC_URL!,
+        1: process.env.NEXT_PUBLIC_REACT_APP_RPC_URL!,
       },
+      qrcode: true
     });
-    try {
-      await activate(walletconnect);
-      setActiveAccount(active);
-    } catch (err) {
-      console.log(err);
-    }
+    await activate(walletconnect);
+    setActiveAccount(active);
   };
 
   function handleDisconnect() {
@@ -101,10 +98,11 @@ const Mint = () => {
   const shortAddress = account?.substr(0, 4) + "..." + account?.substr(38, 4);
 
   useEffect(() => {  
+    setActiveAccount(active);
     if (activeAccount) {
       getMintsRes();
     }
-  }, [activeAccount, getMintsRes]);
+  }, [activeAccount, getMintsRes, active]);
 
   return (
     <div>
@@ -177,7 +175,7 @@ const Mint = () => {
 
         <br />
 
-        { eligbleNfts.length === 0 && activeAccount &&
+        { eligbleNfts.length === 0 && activeAccount && checkedEligible && 
           <p className="font-shark-display  xs:text-lg sm:text-3xl my-6 sm:w-1/2 text-center tracking-tighter">
             You are not elibile for any mints, but you may be eligible for other
             mints in the future.
