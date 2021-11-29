@@ -1,8 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
-import Image from "next/image";
 import { useWeb3React } from "@web3-react/core";
-import { ethers } from 'ethers';
-import {contractAddress, abi} from '../../contracts/sharkFeast';
+import { ethers } from "ethers";
+import { contractAddress, abi } from "../../contracts/sharkFeast";
 import { TransactionResponse } from "@ethersproject/abstract-provider";
 
 interface CommemorativeNFTProps {
@@ -11,13 +10,16 @@ interface CommemorativeNFTProps {
 }
 
 const CommNFT = ({ id }: CommemorativeNFTProps) => {
-
   const [buttonText, setButtonText] = useState<String>("Mint");
   const { account, library } = useWeb3React();
-  
+
   const getBalance = useCallback(async () => {
-    const contract = new ethers.Contract(contractAddress, abi, library.getSigner());
-    const balance = await contract.balanceOf(account, id);      
+    const contract = new ethers.Contract(
+      contractAddress,
+      abi,
+      library.getSigner()
+    );
+    const balance = await contract.balanceOf(account, id);
     if (balance > 0) {
       setButtonText("Minted!");
     }
@@ -28,14 +30,14 @@ const CommNFT = ({ id }: CommemorativeNFTProps) => {
   }, [getBalance]);
 
   const getMerkleProof = async () => {
-    if(buttonText === "Minted!") {
+    if (buttonText === "Minted!") {
       return;
     }
     const info = {
       address: account,
       mintId: id,
     };
-    
+
     const res = await fetch("/api/merkle", {
       method: "POST",
       headers: {
@@ -43,13 +45,15 @@ const CommNFT = ({ id }: CommemorativeNFTProps) => {
       },
       body: JSON.stringify(info),
     });
+
     let proof = await res.json();
-    proof = proof['proof'];
+    proof = proof["proof"];
     const signer = await library.getSigner();
     const contract = new ethers.Contract(contractAddress, abi, signer);
     const contractWithSigner = contract.connect(signer);
     try {
-      const transaction: TransactionResponse = await contractWithSigner.mintCommemorativeShark(id, proof);
+      const transaction: TransactionResponse =
+        await contractWithSigner.mintCommemorativeShark(id, proof);
       setButtonText("Pending...");
       await transaction.wait();
       await getBalance();
@@ -57,7 +61,6 @@ const CommNFT = ({ id }: CommemorativeNFTProps) => {
       console.log(err);
       setButtonText("Mint");
     }
-
   };
 
   return (

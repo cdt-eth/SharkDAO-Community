@@ -14,7 +14,7 @@ const Mint = () => {
   const [eligbleNfts, setEligbleNfts] = useState<Number[]>([]);
   const [checkedEligible, setCheckedEligible] = useState<boolean>(false);
   const [activeAccount, setActiveAccount] = useState<Boolean>(false);
-  
+
   const { active, account, activate, deactivate } = useWeb3React();
 
   const connectMM = async () => {
@@ -50,34 +50,36 @@ const Mint = () => {
   }
 
   const MMContent = () => {
-    return(
+    return (
       <button
-        className={`xs:w-1/3 py-2 px-1 sm:w-28 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${activeAccount
+        className={`xs:w-1/3 py-2 px-1 sm:w-28 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${
+          activeAccount
             ? "bg-shark-dark-blue text-white"
             : "bg-shark-blue text-white"
-          }`}
+        }`}
         onClick={connectMM}
       >
         <img className="w-1/5" src="m.png" alt="mm" />
         MetaMask
       </button>
-    )
-  }
+    );
+  };
 
   const WCContent = () => {
-    return(
+    return (
       <button
-        className={`xs:w-1/3 py-2 px-1 sm:w-28 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${activeAccount
+        className={`xs:w-1/3 py-2 px-1 sm:w-28 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${
+          activeAccount
             ? "bg-shark-dark-blue text-white"
             : "bg-shark-blue text-white"
-          }`}
+        }`}
         onClick={connectWC}
       >
         <img className="w-1/5" src="w.png" alt="mm" />
         WalletConnect
       </button>
-    )
-  }
+    );
+  };
 
   const getMintsRes = useCallback(async () => {
     const bodyApproved = {
@@ -138,24 +140,17 @@ const Mint = () => {
 
             <div>
               {activeAccount ? (
-                <button onClick={handleDisconnect}>
-                  Disconnect
-                </button>
+                <button onClick={handleDisconnect}>Disconnect</button>
               ) : (
                 <Menu as="div">
                   <Menu.Button as="button">Connect</Menu.Button>
-                    <Menu.Items>
-                      <Menu.Item as="button"> 
-                        {MMContent}
-                      </Menu.Item>
-                      <Menu.Item as="button"> 
-                        {WCContent} 
-                      </Menu.Item>
-                    </Menu.Items>
+                  <Menu.Items>
+                    <Menu.Item as="button">{MMContent}</Menu.Item>
+                    <Menu.Item as="button">{WCContent}</Menu.Item>
+                  </Menu.Items>
                 </Menu>
               )}
             </div>
-
           </div>
         </div>
       </div>
@@ -164,11 +159,7 @@ const Mint = () => {
 
       <div className="flex border-6 justify-center font-shark-display xs:text-lg sm:text-3xl">
         {activeAccount ? (
-          !checkedEligible && (
-            <p>
-              Checking NFTs you can mint...
-            </p>
-          )
+          !checkedEligible && <p>Checking NFTs you can mint...</p>
         ) : (
           <div className="">Please connect your wallet.</div>
         )}
@@ -179,13 +170,15 @@ const Mint = () => {
           <p className="font-shark-display  xs:text-lg sm:text-3xl my-6 sm:w-1/2 text-center tracking-tighter">
             You are not elibile for any mints, but you may be eligible for other
             mints in the future.
-          </p> }
-          {eligbleNfts.length > 0 && 
+          </p>
+        }
+        {eligbleNfts.length > 0 && (
           <div className="flex gap-4 flex-wrap">
             {eligbleNfts.map((id) => (
               <CommNFT key={id as number} id={id} />
             ))}
-          </div>}
+          </div>
+        )}
       </div>
     </div>
   );
