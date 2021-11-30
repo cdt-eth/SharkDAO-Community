@@ -7,14 +7,12 @@ import { useWeb3React } from "@web3-react/core";
 import { ApprovedMintsRes } from "../api/approved";
 import Link from "next/link";
 import Header from "./Header";
-
 import { Menu } from "@headlessui/react";
 
 const Mint = () => {
   const [eligbleNfts, setEligbleNfts] = useState<Number[]>([]);
   const [checkedEligible, setCheckedEligible] = useState<boolean>(false);
   const [activeAccount, setActiveAccount] = useState<Boolean>(false);
-
   const { active, account, activate, deactivate } = useWeb3React();
 
   const connectMM = async () => {
@@ -34,7 +32,7 @@ const Mint = () => {
       rpc: {
         1: process.env.NEXT_PUBLIC_REACT_APP_RPC_URL!,
       },
-      qrcode: true
+      qrcode: true,
     });
     await activate(walletconnect);
     setActiveAccount(active);
@@ -52,7 +50,7 @@ const Mint = () => {
   const MMContent = () => {
     return (
       <button
-        className={`xs:w-1/3 py-2 px-1 sm:w-28 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${
+        className={`xs:w-full py-2 px-1 sm:w-36 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${
           activeAccount
             ? "bg-shark-dark-blue text-white"
             : "bg-shark-blue text-white"
@@ -68,7 +66,7 @@ const Mint = () => {
   const WCContent = () => {
     return (
       <button
-        className={`xs:w-1/3 py-2 px-1 sm:w-28 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${
+        className={`xs:w-full py-2 px-1 sm:w-36 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200 flex flex-row items-center gap-2 justify-center ${
           activeAccount
             ? "bg-shark-dark-blue text-white"
             : "bg-shark-blue text-white"
@@ -99,7 +97,7 @@ const Mint = () => {
 
   const shortAddress = account?.substr(0, 4) + "..." + account?.substr(38, 4);
 
-  useEffect(() => {  
+  useEffect(() => {
     setActiveAccount(active);
     if (activeAccount) {
       getMintsRes();
@@ -110,7 +108,7 @@ const Mint = () => {
     <div>
       <Header />
       <div className="">
-        <div className="flex sm:gap-8 my-6 justify-between items-center h-full ">
+        <div className="flex sm:gap-8 my-6 justify-between items-center h-full">
           <div className="xs:hidden sm:flex sm:w-1/2">
             <Link passHref href="/">
               <img
@@ -121,8 +119,8 @@ const Mint = () => {
             </Link>
           </div>
 
-          <div className="flex items-center gap-4 xs:flex-col sm:flex-row ">
-            <div className="flex justify-between ">
+          <div className="flex items-center sm:w-1/3 justify-end xs:flex-col sm:flex-row sm:gap-4">
+            <div className="flex justify-between">
               <div className="sm:hidden w-1/4 ">
                 <Link passHref href="/">
                   <img
@@ -140,14 +138,29 @@ const Mint = () => {
 
             <div>
               {activeAccount ? (
-                <button onClick={handleDisconnect}>Disconnect</button>
+                <button
+                  className="bg-red-700 text-white xs:w-32 py-2.5 px-1 sm:w-24 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200"
+                  onClick={handleDisconnect}
+                >
+                  Disconnect
+                </button>
               ) : (
                 <Menu as="div">
-                  <Menu.Button as="button">Connect</Menu.Button>
-                  <Menu.Items>
-                    <Menu.Item as="button">{MMContent}</Menu.Item>
-                    <Menu.Item as="button">{WCContent}</Menu.Item>
-                  </Menu.Items>
+                  <div className="flex gap-4 xs:mt-4 sm:mt-0">
+                    <Menu.Items>
+                      <div className="flex gap-4">
+                        <Menu.Item as="button">{MMContent}</Menu.Item>
+                        <Menu.Item as="button">{WCContent}</Menu.Item>
+                      </div>
+                    </Menu.Items>
+
+                    <Menu.Button
+                      as="button"
+                      className="bg-green-700 text-white xs:w-32 py-2.5 px-1 sm:w-24 rounded-xl font-shark-display cursor-pointer hover:opacity-75 tracking-tight transition duration-200"
+                    >
+                      Connect
+                    </Menu.Button>
+                  </div>
                 </Menu>
               )}
             </div>
@@ -166,12 +179,12 @@ const Mint = () => {
 
         <br />
 
-        { eligbleNfts.length === 0 && activeAccount && checkedEligible && 
+        {eligbleNfts.length === 0 && activeAccount && checkedEligible && (
           <p className="font-shark-display  xs:text-lg sm:text-3xl my-6 sm:w-1/2 text-center tracking-tighter">
             You are not elibile for any mints, but you may be eligible for other
             mints in the future.
           </p>
-        }
+        )}
         {eligbleNfts.length > 0 && (
           <div className="flex gap-4 flex-wrap">
             {eligbleNfts.map((id) => (
