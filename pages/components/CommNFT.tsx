@@ -65,11 +65,15 @@ const CommNFT = ({ id }: CommemorativeNFTProps) => {
 
   return (
     <div className="text-center xs:px-6 sm:px-0 sm:w-1/4 sm:m-auto">
-      <video autoPlay loop muted className="shadow-xl rounded-2xl  m-auto ">
-        <source src={`./commemorative-${id}.mp4`} type="video/mp4" />
-      </video>
-
-      {/* TODO: Make Minted NFTs unclickable */}
+      {id === 139 ? 
+        <img  src={`/commemorative-${id}.jpg`} 
+              className="shadow-xl rounded-2xl"
+              alt="Commemorative NFT"/>
+      : 
+        <video autoPlay loop muted className="shadow-xl rounded-2xl  m-auto ">
+          <source src={`./commemorative-${id}.mp4`} type="video/mp4" />
+        </video>
+      }
 
       <button
         className="cursor-pointer mt-3 border-2 rounded-xl px-4 py-2 hover:text-shark-white hover:bg-shark-dark-blue hover:border-shark-dark-blue max-w-max shadow-md"

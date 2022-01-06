@@ -14,7 +14,7 @@ type WhitelistData = {
 };
 
 function createMerkleTree(mintId: number): MerkleTree {
-  const idx = [2, 5, 15].indexOf(mintId);
+  const idx = [2, 5, 15, 139].indexOf(mintId);
   const data: WhitelistData = whitelistData["whitelist"][idx];
   const hashedLeaves: string[] = data["leaves"].map((x) => keccak256(x));
   const tree = new MerkleTree(hashedLeaves, keccak256, { sort: true });
