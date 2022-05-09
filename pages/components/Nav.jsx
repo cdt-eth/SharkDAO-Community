@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React, { useState } from "react";
-import NavItem from "./NavItem";
 
 const Nav = () => {
   return (
@@ -34,14 +33,9 @@ const Nav = () => {
 
         <div className="w-full lg:inline-flex lg:flex-grow lg:w-auto">
           <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start nav flex flex-col lg:h-auto text-shark-white font-shark-text xs:mt-3 sm:mt-0">
-            <NavItem section="/" title="Home" />
-            {/* <NavItem section="home" title="Home" /> 
-            <NavItem section="the-basics" title="The Basics" />
-            <NavItem section="mission" title="Mission" />
-            <NavItem section="values" title="Values" />
-            <NavItem section="community" title="Community" />
-            <NavItem section="faq" title="FAQ" />
-            <NavItem section="podcast" title="Podcast" /> */}
+            <Link href="/" passHref>
+              Home
+            </Link>
           </div>
         </div>
       </nav>
