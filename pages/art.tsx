@@ -14,10 +14,19 @@ const Art = () => {
               <h2 className="text-3xl font-extrabold tracking-wide text-gray-900 font-shark-display ">
                 Enter the Shark Art Contest{" "}
               </h2>
-              <p className="mt-4 text-lg text-gray-700">
-                Feel free to submit your artwork to the Shark Island art
-                contest! You can download a template to work off of. The contest
-                will run for approximately a month.
+              <p className="mt-4 text-lg  text-gray-700">
+                Submit your artwork and info here for the Shark Island Art
+                Contest! Check the artwork guide and template to ensure your
+                designs are formatted correctly before uploading. Follow{" "}
+                <a
+                  href="https://twitter.com/sharkdao"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-shark-blue underline"
+                >
+                  @sharkdao on Twitter
+                </a>{" "}
+                for updates. Good luck and thanks for your submissions!
               </p>
               <div className="my-6">
                 <a
