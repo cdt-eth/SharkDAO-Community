@@ -18,7 +18,7 @@ import DesktopNav from "./components/Desktop/DesktopNav";
 const Home: NextPage = () => {
   return (
     <div>
-      <div className="bg-shark-blue text-2xl px-5 py-3 text-center text-shark-white font-bold">
+      {/* <div className="bg-shark-blue text-2xl px-5 py-3 text-center text-shark-white font-bold">
         <a
           className="hover:text-shark-black hover:underline"
           href="https://juicebox.money/#/p/sharkdao"
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         >
           Join SharkDAO today!
         </a>
-      </div>
+      </div> */}
       <Header />
 
       <main>
