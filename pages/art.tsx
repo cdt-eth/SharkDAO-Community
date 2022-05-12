@@ -30,10 +30,12 @@ const Art = () => {
               </p>
               <div className="my-6">
                 <a
-                  href="#"
+                  href="https://www.dropbox.com/sh/n9vrxn88aizkg6h/AABuF2CRkC8b36l7Nwx-7Kw0a?dl=0"
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex px-4 py-2 border border-transparent text-base font-semibold rounded-md shadow-sm text-white bg-shark-blue font-sans hover:bg-opacity-80 transition"
                 >
-                  Download template{" "}
+                  Download files{" "}
                 </a>
               </div>
             </div>
@@ -43,7 +45,7 @@ const Art = () => {
 
           <div className="xs:w-full  sm:w-1/2">
             {/*  eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/shark-art-flyer.png" alt="flyer" />
+            <img src="/poster.png" alt="flyer" />
           </div>
         </div>
       </div>
